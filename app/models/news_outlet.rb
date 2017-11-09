@@ -1,3 +1,3 @@
 class NewsOutlet < ApplicationRecord
-  has_many :user_news_outlets
+  has_many :medias
 end

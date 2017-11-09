@@ -1,3 +1,3 @@
 class Tvshow < ApplicationRecord
-  has_many :user_tvshows
+  has_many :medias
 end

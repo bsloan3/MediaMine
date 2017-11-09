@@ -1,3 +1,3 @@
 class Podcast < ApplicationRecord
-  has_many :user_podcasts
+  has_many :medias
 end
