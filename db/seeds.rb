@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(username: "thomas", email: "thomas@t.com", password: "1234", phone_number: "111-111-1111")
+thomas = User.create(username: "thomas", email: "thomas@t.com", password: "1234", phone_number: "111-111-1111")
 
-Movie.create(movie_name: "Test Movie")
+shaw = Movie.create(movie_name: "Shawshank Redemption")
+
+sox = Sport.create(sport_name: "baseball", team_name: "Red Sox", League: "Major League Baseball", division: "American")
+
+oc = Tvshow.create(show_name: "OC")
+
+nbc = Newsoutlet.create(outlet_name: "NBC")
+
+planet = Podcast.create(podcast_name: "Planet Money")
+
+Media.create(user: thomas, mediable: shaw)
+Media.create(user: thomas, mediable: sox)
+Media.create(user: thomas, mediable: oc)
+Media.create(user: thomas, mediable: nbc)
+Media.create(user: thomas, mediable: planet)
