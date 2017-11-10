@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class YoutubeContainer extends Component {
+export default class MoviesContainer extends Component {
   render() {
     return (
       <div className="page_container">
 
-        <h1 style={{marginTop: '5%'}}> YouTube </h1>
+        <h1 style={{marginTop: '5%'}}> Movies </h1>
 
       </div>
     );
