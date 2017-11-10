@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171109204839) do
 
   create_table "podcasts", force: :cascade do |t|
     t.string "podcast_name"
+    t.string "podcast_embed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

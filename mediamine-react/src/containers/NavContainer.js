@@ -6,7 +6,7 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 export default class NavContainer extends Component {
   render() {
     return (
-    <Navbar inverse collapseOnSelect fixedTop ClassName="navBar">
+    <Navbar inverse collapseOnSelect fixedTop className="navBar">
       <Navbar.Header>
         <Navbar.Brand>
           <NavLink exact activeClassName='active' to='/'>
