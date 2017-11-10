@@ -30,6 +30,7 @@ export default class PodcastContainer extends Component {
             <iframe width="30%" height="450" scrolling="no" frameborder="no" src={podcast.podcast_embed}></iframe>
             )
         })}
+
       </div>
     );
   }
