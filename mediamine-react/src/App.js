@@ -14,22 +14,30 @@ import PodcastsContainer from './containers/PodcastsContainer';
 class App extends Component {
   render() {
     return (
-      <div>
-        <div>
-        {/* <NavContainer /> */}
-        <div id="NewsContainer">
-          <a href='#NewsContainer'>Youtube</a>
+      <div className="App">
+
+        <div className="Nav">
+          <NavContainer/>
         </div>
+
+        <div id="PodcastsContainer">
+          <PodcastsContainer/>
+        </div>
+
         <div id="SportsContainer" className="page">
-          <SportsContainer />
+          <SportsContainer/>
         </div>
-        {/* <div id="NewsContainer" className="page">
-          <NewsContainer />
-        </div> */}
-        <div id="sports" className="page">
+
+        <div id="NewsContainer" className="page">
+          <NewsContainer/>
         </div>
+
+        <div id="YoutubeContainer" className="page">
+          <YoutubeContainer/>
+        </div>
+
       </div>
-      </div>
+
     );
   }
 }
