@@ -15,7 +15,6 @@ import { BrowserRouter, Router, Route} from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-
       <BrowserRouter>
         <div>
         <NavContainer/>
