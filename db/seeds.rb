@@ -24,17 +24,17 @@ User.delete_all
 
 thomas = User.create(username: "thomas", email: "thomas@t.com", password: "1234", phone_number: "111-111-1111")
 
-shaw = Movie.create(movie_name: "Shawshank Redemption")
+movie1 = Movie.create(movie_name: "Shawshank Redemption")
 
-sox = Sport.create(sport_name: "baseball", team_name: "Red Sox", league_name: "Major League Baseball", division_name: "American")
+sport1 = Sport.create(sport_name: "baseball", team_name: "Red Sox", league_name: "Major League Baseball", division_name: "American")
 
-oc = Tvshow.create(show_name: "OC")
+show1 = Tvshow.create(show_name: "The OC")
 
-nbc = NewsOutlet.create(outlet_name: "NBC")
+news1 = NewsOutlet.create(outlet_name: "cnn")
 
-Podcast.create(podcast_name:"Off Book", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/321908803&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
-Podcast.create(podcast_name:"Monday Morning Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/24758916&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
-Podcast.create(podcast_name:"The Empire Film Podcase", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13178752&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
+pod1 = Podcast.create(podcast_name:"Off Book", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/321908803&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
+pod2 = Podcast.create(podcast_name:"Monday Morning Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/24758916&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
+pod3 = Podcast.create(podcast_name:"The Empire Film Podcase", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13178752&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 Podcast.create(podcast_name:"BookD Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/39473817&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 Podcast.create(podcast_name:"The Second Captains Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/44619822&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 Podcast.create(podcast_name:"The Game Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/54149232&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
@@ -129,7 +129,10 @@ Podcast.create(podcast_name:"Kinda Funny", podcast_embed: 'https://w.soundcloud.
 Podcast.create(podcast_name:"Nerdist Writers Panel", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/37794987&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 Podcast.create(podcast_name:"The Night Time Show", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/211291732&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 
-Interest.create(user: thomas, interestable: shaw)
-Interest.create(user: thomas, interestable: sox)
-Interest.create(user: thomas, interestable: oc)
-Interest.create(user: thomas, interestable: nbc)
+Interest.create(user: thomas, interestable: show1)
+Interest.create(user: thomas, interestable: sport1)
+Interest.create(user: thomas, interestable: movie1)
+Interest.create(user: thomas, interestable: news1)
+Interest.create(user: thomas, interestable: pod1)
+Interest.create(user: thomas, interestable: pod2)
+Interest.create(user: thomas, interestable: pod3)
