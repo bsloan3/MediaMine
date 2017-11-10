@@ -21,13 +21,13 @@ export default class PodcastContainer extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="page_container">
 
         <h1 style={{marginTop: '5%'}}> Podcasts </h1>
 
         {this.state.embed_links.map(function (podcast) {
           return (
-            <iframe width="30%" height="450" scrolling="no" frameborder="no" src={podcast.podcast_embed}></iframe>
+            <iframe width="30%" height="450" scrolling="no" frameborder="no" src={podcast}></iframe>
             )
         })}
 

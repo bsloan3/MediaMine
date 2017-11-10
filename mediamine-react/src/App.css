@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-#news {
+/*#news {
   background-color: green;
 }
 
@@ -12,6 +12,10 @@
 
 #youtube {
   background-color: yellow;
+}*/
+
+.page_container {
+  height: 90VH;
 }
 
 a {
