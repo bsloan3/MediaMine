@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
   def index
-    # interests = Interest.where(user_id: 1, interestable_type: "NewsOutlet")
-    # news_embed = interests.map { |x| x.interestable.podcast_embed }
-    # render :json => news_embed
+    news_sources = Interest.where(user_id: 1, interestable_type: "NewsOutlet")
+    news_embed = news_sources.map { |x| x.interestable.outlet_name }
+    render :json => news_embed
   end
 end

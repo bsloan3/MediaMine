@@ -17,33 +17,33 @@ class App extends Component {
       <BrowserRouter>
       <div>
         <Route path='/signup' component={SignupContainer} />
-      <div className="App">
 
-        <Route path='/login' component={LoginContainer} />
+        <div className="App">
+          <Route path='/login' component={LoginContainer} />
+          <div className="Nav">
+            <NavContainer/>
+          </div>
 
-        <div className="Nav">
-          <NavContainer/>
+          <div className="appbody">
+            <div id="PodcastsContainer">
+              <PodcastsContainer/>
+            </div>
+
+            <div id="SportsContainer" className="page">
+              <SportsContainer/>
+            </div>
+
+            <div id="NewsContainer" className="page">
+              <NewsContainer/>
+            </div>
+
+            <div id="YoutubeContainer" className="page">
+              <YoutubeContainer/>
+            </div>
+          </div>
         </div>
-
-        <div id="PodcastsContainer">
-          <PodcastsContainer/>
-        </div>
-
-        <div id="SportsContainer" className="page">
-          <SportsContainer/>
-        </div>
-
-        <div id="NewsContainer" className="page">
-          <NewsContainer/>
-        </div>
-
-        <div id="YoutubeContainer" className="page">
-          <YoutubeContainer/>
-        </div>
-
       </div>
-    </div>
-  </BrowserRouter>
+      </BrowserRouter>
 
     );
   }
