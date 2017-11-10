@@ -1,3 +1,3 @@
 class Podcast < ApplicationRecord
-  has_many :user_podcasts
+  has_many :interests, as: :interestable, dependent: :destroy
 end
