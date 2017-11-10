@@ -31,6 +31,7 @@ sport1 = Sport.create(sport_name: "baseball", team_name: "Red Sox", league_name:
 show1 = Tvshow.create(show_name: "The OC")
 
 news1 = NewsOutlet.create(outlet_name: "cnn")
+news2 = NewsOutlet.create(outlet_name: "breitbart-news")
 
 pod1 = Podcast.create(podcast_name:"Off Book", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/321908803&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
 pod2 = Podcast.create(podcast_name:"Monday Morning Podcast", podcast_embed: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/24758916&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true')
@@ -133,6 +134,7 @@ Interest.create(user: thomas, interestable: show1)
 Interest.create(user: thomas, interestable: sport1)
 Interest.create(user: thomas, interestable: movie1)
 Interest.create(user: thomas, interestable: news1)
+Interest.create(user: thomas, interestable: news2)
 Interest.create(user: thomas, interestable: pod1)
 Interest.create(user: thomas, interestable: pod2)
 Interest.create(user: thomas, interestable: pod3)

@@ -2,20 +2,26 @@
   height: 100vh;
 }
 
-/*#news {
-  background-color: green;
+.news-img {
+   position: relative;
+   width: 100%; /* for IE 6 */
 }
-
-#SportsContainer {
-  background-color: red;
+.news-img .news-article {
+   position: absolute;
+   bottom: 0%;
+   padding-bottom: 3%;
+   padding-top: 3%;
+   left: 0;
+   width: 70%;
+   background-color: rgba(0, 0, 0, 0.7);
 }
-
-#youtube {
-  background-color: yellow;
-}*/
 
 .page_container {
   height: 90VH;
+}
+
+.appbody {
+  background-color: gray;
 }
 
 a {
