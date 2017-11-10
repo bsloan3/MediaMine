@@ -21,9 +21,12 @@ export default class LoginContainer extends Component {
         password: this.state.password
       },
     }).then(res => {
-      debugger
-      console.log(res)
+    if (res.status === 200) {
       this.setState({email: res.email})
+      sessionStorage.setItem("user_id", res.data.id);
+      console.log(this.props)
+      this.props.history.push('/')
+    }
     }).catch(error => {
     console.log(error.res)
   });

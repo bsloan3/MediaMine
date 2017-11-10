@@ -17,7 +17,9 @@ class App extends Component {
       <BrowserRouter>
       <div>
         <Route path='/signup' component={SignupContainer} />
-
+        <Route path='/login' component={LoginContainer} />
+        <Route path='/logout' component={NavContainer} />
+     
         <div className="App">
           <Route path='/login' component={LoginContainer} />
           <div className="Nav">
@@ -40,7 +42,6 @@ class App extends Component {
             <div id="YoutubeContainer" className="page">
               <YoutubeContainer/>
             </div>
-          </div>
         </div>
       </div>
       </BrowserRouter>
