@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export default class NavContainer extends Component {
   render() {
     return (
-    <Navbar inverse collapseOnSelect fixedTop ClassName="navBar">
+    <div>
+    <Navbar inverse collapseOnSelect fixedTop className="navBar">
       <Navbar.Header>
         <Navbar.Brand>
           <NavLink exact activeClassName='active' to='/'>
@@ -17,11 +18,11 @@ export default class NavContainer extends Component {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem className="nav-item" eventKey={1}>
-            <NavLink activeClassName='active' to='/login'>
-              Login
-            </NavLink>
-          </NavItem>
+          <NavItem className="nav-item" eventKey={7}>
+            <NavLink activeClassName='active' to='/youtube'>
+            Youtube
+          </NavLink>
+        </NavItem>
           <NavItem className="nav-item" eventKey={2}>
             <NavLink activeClassName='active' to='/calendar'>
               Calendar
@@ -47,14 +48,16 @@ export default class NavContainer extends Component {
               Sports
             </NavLink>
           </NavItem>
-          <NavItem className="nav-item" eventKey={7}>
-            <NavLink activeClassName='active' to='/youtube'>
-              Youtube
-            </NavLink>
-          </NavItem>
+
+          <NavItem className="nav-item log-in" eventKey={7}>
+            <NavLink activeClassName='active' to='/login'>
+            Login
+          </NavLink>
+        </NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+  </div>
     );
   }
 }
