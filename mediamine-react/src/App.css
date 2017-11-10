@@ -1,1 +1,35 @@
+a {
+  text-decoration: none;
+  color: #d8d8d8;
+  text-align: center;
+}
 
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #A7A7A7;
+
+}
+
+/*.navBar {
+  filter: alpha(opacity=50);
+}*/
+.navbar-brand {
+  /*background-color: #696969;*/
+}
+
+.nav-item {
+  display: block;
+  width: 90px;
+}
+
+.nav-item:hover{
+  background-color: #696969;
+
+}
+
+
+
+.sports {
+  padding-top: 5%;
+}

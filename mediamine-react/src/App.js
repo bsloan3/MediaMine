@@ -9,33 +9,25 @@ import SportsContainer from './containers/SportsContainer';
 import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
+import { BrowserRouter, Router, Route} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
     return (
-    <div className="App">
-      <NavContainer/>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-      <h1>dgsfsdgf</h1>
-    </div>
+
+      <BrowserRouter>
+        <div>
+        <NavContainer/>
+        <Route path='/login' component={LoginContainer} />
+        <Route path='/calendar' component={CalendarContainer} />
+        <Route path='/news' component={NewsContainer} />
+        <Route path='/podcasts' component={PodcastsContainer} />
+        <Route path='/signup' component={SignupContainer} />
+        <Route path='/sports' component={SportsContainer} />
+        <Route path='/youtube' component={YoutubeContainer} />
+      </div>
+  </BrowserRouter>
     );
   }
 }
