@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {FormGroup, ControlLabel, FormControl, HelpBlock, Col, Button} from 'react-bootstrap';
+import {FormGroup, ControlLabel, FormControl, Col, Button} from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -12,19 +12,22 @@ export default class LoginContainer extends Component {
       password: ''
     }
     this.submitLogIn = this.submitLogIn.bind(this)
-  //   this.login = this.login.bind(this)
   }
-  //
-  // login(event){
-  //   event.preventDefault();
-  //   axios.post('http://localhost:3000/sessions',
-  // {user)
-  // }
-  // getInitialState() {
-  //   return {
-  //     value: '',
-  //     };
-  //   }
+  submitLogIn(e) {
+    e.preventDefault()
+    axios.post('http://localhost:5000/login', {
+      user: {
+        email: this.state.email,
+        password: this.state.password
+      },
+    }).then(res => {
+      debugger
+      console.log(res)
+      this.setState({email: res.email})
+    }).catch(error => {
+    console.log(error.res)
+  });
+  }
 
   getValidationState() {
      const length = this.state.username.length;
@@ -42,24 +45,13 @@ export default class LoginContainer extends Component {
        this.setState({ password: e.target.value});
      }
 
-     submitLogIn(e) {
-       debugger
-       e.preventDefault()
-       axios.post('http://localhost:5000/login', {
-         user: {
-           email: this.state.email,
-           password: this.state.password
-         },
-       }).then((res) => {"Woot!"})
-       .catch((err) => console.log(err));
-     }
 
   render() {
     return (
       <div>
         <form onSubmit={this.submitLogIn}>
           <FormGroup controlId="formHorizontalEmail"
-            validationState={this.getValidationState()}
+            validationState={this.getValidationState(this)}
           >
             <Col componentClass={ControlLabel} sm={2}>
               Email:

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-
+import {BrowserRouter, Route, NavLink} from 'react-router-dom';
 
 export default class NavContainer extends Component {
   render() {
     return (
+    <BrowserRouter>
       <div>
     <Navbar inverse collapseOnSelect fixedTop className="navBar">
       <Navbar.Header>
@@ -15,20 +16,24 @@ export default class NavContainer extends Component {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
+          <NavItem className="nav-item" eventKey={5}>
+            <NavLink activeClassName='active' to='/signup'>
+            Sign Up
+          </NavLink>
+        </NavItem>
           <NavItem className="nav-item" eventKey={1} href="#SportsContainer">
             Sports
         </NavItem>
           <NavItem className="nav-item" eventKey={2}>
-              Calendar
+            <NavLink activeClassName='active' to='/login'>
+            Login
+          </NavLink>
           </NavItem>
           <NavItem className="nav-item" eventKey={3} href="#NewsContainer">
               News
           </NavItem>
           <NavItem className="nav-item" eventKey={4}>
               Podcasts
-          </NavItem>
-          <NavItem className="nav-item" eventKey={5}>
-              Sign Up
           </NavItem>
           <NavItem className="nav-item" eventKey={6}>
               Youtube
@@ -40,6 +45,7 @@ export default class NavContainer extends Component {
       </Navbar.Collapse>
     </Navbar>
   </div>
+</BrowserRouter>
     );
   }
 }

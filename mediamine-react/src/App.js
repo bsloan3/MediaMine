@@ -9,12 +9,17 @@ import SportsContainer from './containers/SportsContainer';
 import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
-
+import {BrowserRouter, Route} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
+      <BrowserRouter>
+      <div>
+        <Route path='/signup' component={SignupContainer} />
       <div className="App">
+
+        <Route path='/login' component={LoginContainer} />
 
         <div className="Nav">
           <NavContainer/>
@@ -37,6 +42,8 @@ class App extends Component {
         </div>
 
       </div>
+    </div>
+  </BrowserRouter>
 
     );
   }
