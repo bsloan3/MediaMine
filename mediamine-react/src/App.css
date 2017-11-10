@@ -1,3 +1,19 @@
+.page {
+  height: 100vh;
+}
+
+#news {
+  background-color: green;
+}
+
+#SportsContainer {
+  background-color: red;
+}
+
+#youtube {
+  background-color: yellow;
+}
+
 a {
   text-decoration: none;
   color: #d8d8d8;

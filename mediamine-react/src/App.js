@@ -9,17 +9,27 @@ import SportsContainer from './containers/SportsContainer';
 import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
-import { BrowserRouter, Route} from 'react-router-dom';
 
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className="sports">
-        <NavContainer />
+      <div>
+        <div>
+        {/* <NavContainer /> */}
+        <div id="NewsContainer">
+          <a href='#NewsContainer'>Youtube</a>
+        </div>
+        <div id="SportsContainer" className="page">
+          <SportsContainer />
+        </div>
+        {/* <div id="NewsContainer" className="page">
+          <NewsContainer />
+        </div> */}
+        <div id="sports" className="page">
+        </div>
       </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }
