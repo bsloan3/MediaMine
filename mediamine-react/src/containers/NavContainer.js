@@ -1,58 +1,40 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
 
 
 export default class NavContainer extends Component {
   render() {
     return (
-
+      <div>
     <Navbar inverse collapseOnSelect fixedTop className="navBar">
       <Navbar.Header>
         <Navbar.Brand>
-          <NavLink exact activeClassName='active' to='/'>
             MediaMine
-          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem className="nav-item" eventKey={7}>
-            <NavLink activeClassName='active' to='/youtube'>
-            Youtube
-          </NavLink>
+          <NavItem className="nav-item" eventKey={1} href="#SportsContainer">
+            Sports
         </NavItem>
           <NavItem className="nav-item" eventKey={2}>
-            <NavLink activeClassName='active' to='/calendar'>
               Calendar
-            </NavLink>
           </NavItem>
-          <NavItem className="nav-item" eventKey={3}>
-            <NavLink activeClassName='active' to='/news'>
+          <NavItem className="nav-item" eventKey={3} href="#NewsContainer">
               News
-            </NavLink>
           </NavItem>
           <NavItem className="nav-item" eventKey={4}>
-            <NavLink activeClassName='active' to='/podcasts'>
               Podcasts
-            </NavLink>
           </NavItem>
           <NavItem className="nav-item" eventKey={5}>
-            <NavLink activeClassName='active' to='/signup'>
               Sign Up
-            </NavLink>
           </NavItem>
           <NavItem className="nav-item" eventKey={6}>
-            <NavLink activeClassName='active' to='/sports'>
-              Sports
-            </NavLink>
+              Youtube
           </NavItem>
-
           <NavItem className="nav-item log-in" eventKey={7}>
-            <NavLink activeClassName='active' to='/login'>
             Login
-          </NavLink>
         </NavItem>
         </Nav>
       </Navbar.Collapse>
