@@ -22,11 +22,14 @@ export default class SignupContainer extends Component {
         password: this.state.password
       },
     }).then(res => {
-      console.log(res)
+    if (res.status === 200) {
       this.setState({
         username: res.username,
         email: res.email,
         password: res.password})
+        sessionStorage.setItem("user_id", res.data.id);
+        this.props.history.push('/')
+       }
       }).catch(err => {
         console.log(err.res)
     });

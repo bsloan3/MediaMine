@@ -1,11 +1,30 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import {Route, Link, NavLink} from 'react-router-dom';
+import axios from 'axios';
+
 
 export default class NavContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.logOut = this.logOut.bind(this);
+  }
+
+  logOut(){
+    sessionStorage.clear()
+    axios.post('http://localhost:5000/logout')
+    .then((res) =>{
+      console.log(this)
+      sessionStorage.clear()
+      this.props.history.push('/')
+    }).catch((res) => {
+      sessionStorage.clear()
+    })
+  }
+
   render() {
+    if(sessionStorage.length === 0){
     return (
-    <BrowserRouter>
       <div>
     <Navbar inverse collapseOnSelect fixedTop className="navBar">
       <Navbar.Header>
@@ -17,18 +36,37 @@ export default class NavContainer extends Component {
       <Navbar.Collapse>
         <Nav>
           <NavItem className="nav-item" eventKey={5}>
-            <NavLink activeClassName='active' to='/signup'>
-            Sign Up
-          </NavLink>
+              <Link activeClassName='active' to='/signup'>
+              Sign Up
+            </Link>
+          </NavItem>
+          <NavItem className="nav-item" eventKey={2}>
+            <Link activeClassName='active' to='/login'>
+            Login
+          </Link>
         </NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+  </div>
+
+    );
+  }
+    else{
+      return(
+          <div>
+        <Navbar inverse collapseOnSelect fixedTop className="navBar">
+          <Navbar.Header>
+            <Navbar.Brand>
+                MediaMine
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
           <NavItem className="nav-item" eventKey={1} href="#SportsContainer">
             Sports
         </NavItem>
-          <NavItem className="nav-item" eventKey={2}>
-            <NavLink activeClassName='active' to='/login'>
-            Login
-          </NavLink>
-          </NavItem>
           <NavItem className="nav-item" eventKey={3} href="#NewsContainer">
               News
           </NavItem>
@@ -38,27 +76,17 @@ export default class NavContainer extends Component {
           <NavItem className="nav-item" eventKey={6}>
               Youtube
           </NavItem>
-          <NavItem className="nav-item log-in" eventKey={7}>
-            Login
-        </NavItem>
+          <NavItem className="nav-item" onClick={this.logOut}>
+            <Link activeClassName='active' to='/logout'>
+            Log Out
+          </Link>
+          </NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   </div>
-</BrowserRouter>
+
     );
+    }
   }
 }
-
-/* <Nav pullRight>
-  <NavItem eventKey={1} href="#">Link Right</NavItem>
-  <NavItem eventKey={2} href="#">Link Right</NavItem>
-</Nav> */
-
-/* <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-<MenuItem eventKey={3.1}>Action</MenuItem>
-<MenuItem eventKey={3.2}>Another action</MenuItem>
-<MenuItem eventKey={3.3}>Something else here</MenuItem>
-<MenuItem divider />
-<MenuItem eventKey={3.3}>Separated link</MenuItem>
-</NavDropdown> */

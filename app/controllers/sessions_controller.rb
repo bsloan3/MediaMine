@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def delete
-    reset_session
-    redirect_to '/'
+    puts "hello!"
+    session.clear
   end
 end
