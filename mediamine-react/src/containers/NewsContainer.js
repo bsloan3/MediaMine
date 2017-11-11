@@ -10,7 +10,7 @@ export default class NewsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/news')
+    fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/news/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({news_sources: responseJson});

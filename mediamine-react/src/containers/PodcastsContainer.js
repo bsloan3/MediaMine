@@ -10,7 +10,7 @@ export default class PodcastContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/podcasts')
+    fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/podcasts/')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({embed_links: responseJson});

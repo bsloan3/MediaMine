@@ -24,7 +24,7 @@ User.delete_all
 
 thomas = User.create(username: "thomas", email: "thomas@t.com", password: "1234", phone_number: "111-111-1111")
 
-movie1 = Movie.create(movie_name: "Shawshank Redemption")
+movie1 = Movie.create(movie_name: "Incredibles 2")
 
 sport1 = Sport.create(sport_name: "baseball", team_name: "Red Sox", league_name: "Major League Baseball", division_name: "American")
 
