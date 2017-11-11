@@ -79,11 +79,11 @@ export default class LoginContainer extends Component {
             <FormControl.Feedback />
           </FormGroup>
         <FormGroup>
-        <Col smOffset={2} sm={10}>
-          <Button onClick={this.props.closePopup} type="submit">
+          <div className="login-button">
+          <Button onClick={this.props.closePopup} className="btn btn-danger btn-md" type="submit">
             Log In
           </Button>
-        </Col>
+        </div>
       </FormGroup>
       </form>
 
