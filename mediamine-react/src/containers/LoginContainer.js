@@ -26,6 +26,7 @@ export default class LoginContainer extends Component {
       sessionStorage.setItem("user_id", res.data.id);
       console.log(this.props)
       this.props.history.push('/')
+      window.location.reload()
     }
     }).catch(error => {
     console.log(error.res)
@@ -51,51 +52,45 @@ export default class LoginContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className='popup'>
+       <div className='popup_inner'>
+         <div className="logincontainer">
         <form onSubmit={this.submitLogIn}>
           <FormGroup controlId="formHorizontalEmail"
             validationState={this.getValidationState(this)}
           >
-            <Col componentClass={ControlLabel} sm={2}>
-              Email:
-            </Col>
-            <Col sm={10}>
-
-              <FormControl
-                type="email"
-                value={this.state.email}
-                placeholder="Enter email"
-                onChange={this.handleChange.bind(this)}
+          <FormControl
+              type="email"
+              value={this.state.email}
+              placeholder="Email"
+              onChange={this.handleChange.bind(this)}
               />
-            </Col>
             <FormControl.Feedback />
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword"
-            validationState={this.getValidationState()}
-            >
-            <Col componentClass={ControlLabel} sm={2}>
-              Password:
-            </Col>
-            <Col sm={10}>
-              <FormControl
-                type="password"
-                value={this.state.password}
-                placeholder="Enter Password"
-                onChange={this.handlePassword.bind(this)}
-              />
-            </Col>
+            validationState={this.getValidationState()}>
+          <FormControl
+              type="password"
+              value={this.state.password}
+              placeholder="Password"
+              onChange={this.handlePassword.bind(this)}
+            />
             <FormControl.Feedback />
           </FormGroup>
         <FormGroup>
         <Col smOffset={2} sm={10}>
-          <Button type="submit">
-            Sign in
+          <Button onClick={this.props.closePopup} type="submit">
+            Log In
           </Button>
         </Col>
       </FormGroup>
       </form>
+
       </div>
+    </div>
+  </div>
+
     );
   }
 }

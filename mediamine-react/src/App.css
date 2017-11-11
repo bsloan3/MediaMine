@@ -45,16 +45,39 @@ a:hover {
 }
 
 .nav-item {
-  display: block;
-  width: 90px;
+  display: inline-block;
 }
 
-.nav-item:hover{
-  background-color: #696969;
-
+.stuff {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  padding-top: 15px;
 }
 
+.unlogged {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  padding-top: 15px;
+}
 
+.unlogged:hover {
+  background-color: red;
+}
+.stuff:hover {
+  background-color: red;
+}
+
+.email-component {
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+}
 
 .sports {
   padding-top: 5%;
@@ -64,6 +87,42 @@ a:hover {
 .log-in {
   float: right;
 }
+
+.logincontainer {
+  padding-top: 10%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+html, body, .app {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.popup {
+  position: fixed;
+  width: 20%;
+  height: 50%;
+  top: 0;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  width: 90%;
+  top: 30%;
+  left: 5%;
+  bottom: 25%;
+  padding-top: 25%;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
 
 /* Countdown styles */
 .countdown{

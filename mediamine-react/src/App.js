@@ -10,20 +10,29 @@ import MoviesContainer from './containers/MoviesContainer';
 import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
+import HomepageContainer from './containers/HomepageContainer'
 import {BrowserRouter, Route} from 'react-router-dom';
 
-class App extends Component {
+export default class App extends Component {
   render() {
+  if(sessionStorage.length === 0){
     return (
       <BrowserRouter>
-      <div>
+        <div>
+        <HomepageContainer />
         <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
-        <Route path='/logout' component={NavContainer} />
+      </div>
+    </BrowserRouter>
+      );
+    }
 
+    else {
+      return(
+        <BrowserRouter>
         <div className="App">
-          <Route path='/login' component={LoginContainer} />
           <div className="Nav">
+            <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
 
@@ -49,11 +58,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </div>
       </BrowserRouter>
-
-    );
+      );
+    }
   }
 }
-
-export default App;

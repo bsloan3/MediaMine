@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {Route, Link, NavLink} from 'react-router-dom';
 import axios from 'axios';
-
+import Scrollspy from 'react-scrollspy'
 
 export default class NavContainer extends Component {
   constructor(props) {
@@ -16,45 +16,16 @@ export default class NavContainer extends Component {
     .then((res) =>{
       console.log(this)
       sessionStorage.clear()
-      this.props.history.push('/')
+      window.location.reload()
     }).catch((res) => {
       sessionStorage.clear()
     })
   }
 
   render() {
-    if(sessionStorage.length === 0){
-    return (
-      <div>
-    <Navbar inverse collapseOnSelect fixedTop className="navBar">
-      <Navbar.Header>
-        <Navbar.Brand>
-            MediaMine
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
-      <Navbar.Collapse>
-        <Nav>
-          <NavItem className="nav-item" eventKey={5}>
-              <Link activeClassName='active' to='/signup'>
-              Sign Up
-            </Link>
-          </NavItem>
-          <NavItem className="nav-item" eventKey={2}>
-            <Link activeClassName='active' to='/login'>
-            Login
-          </Link>
-        </NavItem>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-  </div>
-
-    );
-  }
-    else{
       return(
           <div>
+          <Scrollspy items={ ['sports-item', 'news-item', 'podcasts-item-item'], ['youtube-item'] } currentClassName="is-current">
         <Navbar inverse collapseOnSelect fixedTop className="navBar">
           <Navbar.Header>
             <Navbar.Brand>
@@ -62,31 +33,38 @@ export default class NavContainer extends Component {
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-          <NavItem className="nav-item" eventKey={1} href="#SportsContainer">
+          <a id="sports-item" className="nav-item" href="#SportsContainer">
+            <div className="stuff">
             Sports
-        </NavItem>
-          <NavItem className="nav-item" eventKey={3} href="#NewsContainer">
+          </div>
+        </a>
+          <a id="news-item" className="nav-item" href="#NewsContainer">
+            <div className="stuff">
               News
-          </NavItem>
-          <NavItem className="nav-item" eventKey={4}>
+            </div>
+          </a>
+          <a id="podcasts-item" className="nav-item" href="#PodcastsContainer">
+            <div className="stuff">
               Podcasts
-          </NavItem>
-          <NavItem className="nav-item" eventKey={6}>
+            </div>
+          </a>
+          <a id="youtube-item" className="nav-item" href="#YoutubeContainer">
+            <div className="stuff">
               Youtube
-          </NavItem>
-          <NavItem className="nav-item" onClick={this.logOut}>
+            </div>
+          </a>
+          <a className="nav-item" onClick={this.logOut}>
             <Link activeClassName='active' to='/logout'>
+            <div className="stuff">
             Log Out
-          </Link>
-          </NavItem>
-        </Nav>
-      </Navbar.Collapse>
+          </div>
+            </Link>
+          </a>
     </Navbar>
+  </Scrollspy>
+
   </div>
 
     );
-    }
   }
 }

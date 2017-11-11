@@ -11,7 +11,8 @@
     "react-image": "^1.3.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "react-scroll-box": "^0.2.9"
+    "react-scroll-box": "^0.2.9",
+    "react-scrollspy": "^3.3.4"
   },
   "scripts": {
     "start": "react-scripts start",
