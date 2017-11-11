@@ -16,7 +16,7 @@ export default class NavContainer extends Component {
     .then((res) =>{
       console.log(this)
       sessionStorage.clear()
-      this.props.history.push('/')
+      window.location.reload()
     }).catch((res) => {
       sessionStorage.clear()
     })
@@ -26,7 +26,7 @@ export default class NavContainer extends Component {
     if(sessionStorage.length === 0){
     return (
       <div>
-    <Navbar inverse collapseOnSelect fixedTop className="navBar">
+    <Navbar inverse collapseOnSelect className="navbar-fixed-top navBar">
       <Navbar.Header>
         <Navbar.Brand>
             MediaMine
@@ -64,6 +64,7 @@ export default class NavContainer extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
+              <body data-spy="scroll" data-target=".navbar" data-offset="50">
           <NavItem className="nav-item" eventKey={1} href="#SportsContainer">
             Sports
         </NavItem>
@@ -79,8 +80,9 @@ export default class NavContainer extends Component {
           <NavItem className="nav-item" onClick={this.logOut}>
             <Link activeClassName='active' to='/logout'>
             Log Out
-          </Link>
-          </NavItem>
+            </Link>
+            </NavItem>
+          </body>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

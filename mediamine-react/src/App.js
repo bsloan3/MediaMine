@@ -12,17 +12,29 @@ import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-class App extends Component {
+export default class App extends Component {
   render() {
+  if(sessionStorage.length === 0){
     return (
-      <BrowserRouter>
       <div>
+      <BrowserRouter>
+        <div className="App">
+          <div className="Nav">
+            <NavContainer/>
+          </div>
         <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
         <Route path='/logout' component={NavContainer} />
+      </div>
+    </BrowserRouter>
+  </div>
+      );
+    }
 
+    else {
+      return(
+        <BrowserRouter>
         <div className="App">
-          <Route path='/login' component={LoginContainer} />
           <div className="Nav">
             <NavContainer/>
           </div>
@@ -39,21 +51,18 @@ class App extends Component {
             <div id="NewsContainer" className="page">
               <NewsContainer/>
             </div>
-
+{/*
             <div id="MoviesContainer" className="page">
               <MoviesContainer/>
-            </div>
+            </div> */}
 
             <div id="YoutubeContainer" className="page">
               <YoutubeContainer/>
             </div>
           </div>
         </div>
-      </div>
       </BrowserRouter>
-
     );
+    }
   }
 }
-
-export default App;
