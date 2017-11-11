@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar'
+import MovieResult from './MovieResult'
+import MovieCountdowns from './MovieCountdowns'
 
 export default class MoviesContainer extends Component {
     constructor(props) {
-    super(props);
-    this.state = {
-      embed_links:[]
-    };
+      super(props);
+      this.state = {result: []}
+      this.updateResult = this.updateResult.bind(this);
+    }
+
+  updateResult(newResult) {
+    this.setState({result: newResult})
   }
 
   componentDidMount(){
@@ -22,12 +28,10 @@ export default class MoviesContainer extends Component {
     return (
       <div className="page_container">
 
-        <h1 style={{marginTop: '5%'}}> Movies </h1>
-         {this.state.embed_links.map(function (movie) {
-          return (
-            <div><p>movie</p></div>
-            )
-        })}
+        <h1>Movies</h1>
+        <MovieCountdowns />
+        <SearchBar onUpdate={this.updateResult} />
+        <div className="movie-result"> <MovieResult newMovie={this.state.result}/></div>
 
       </div>
     );
