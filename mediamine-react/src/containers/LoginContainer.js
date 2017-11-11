@@ -52,7 +52,6 @@ export default class LoginContainer extends Component {
 
   render() {
     return (
-
       <div className='popup'>
        <div className='popup_inner'>
          <div className="logincontainer">
@@ -90,7 +89,8 @@ export default class LoginContainer extends Component {
 
       </div>
     </div>
-      </div>
+  </div>
+
     );
   }
 }
