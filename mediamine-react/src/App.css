@@ -255,6 +255,7 @@ html, body, .app {
 /*sports*/
 .standings{
   column-count: 2;
+}
 
 .video-background {
   background: #000;
