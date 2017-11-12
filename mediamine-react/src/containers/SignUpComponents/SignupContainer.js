@@ -8,7 +8,8 @@ export default class SignupContainer extends Component {
    this.state = {
      username: '',
      email: '',
-     password: ''
+     password: '',
+     phone_number: ''
    }
    this.submitSignUp = this.submitSignUp.bind(this)
   }
@@ -19,14 +20,17 @@ export default class SignupContainer extends Component {
       user: {
         username: this.state.username,
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
+        phone_number: this.state.phone_number
       },
     }).then(res => {
     if (res.status === 200) {
       this.setState({
         username: res.username,
         email: res.email,
-        password: res.password})
+        password: res.password,
+        phone_number: res.phone_number
+      })
         sessionStorage.setItem("user_id", res.data.id);
         this.props.history.push('/')
        }
@@ -44,81 +48,68 @@ export default class SignupContainer extends Component {
    handleUsername(e) {
      this.setState({ username: e.target.value });
    }
-   getValidationState() {
-     const length = this.state.username.length;
-     if (length > 10) return 'success';
-     else if (length > 5) return 'warning';
-     else if (length > 0) return 'error';
-     return null;
+   handleNumber(e) {
+     this.setState({ phone_number: e.target.value });
    }
 
   render() {
 
     return (
 
-        <div>
+      <div>
+      <div className="sign-up">
+        	<div className="main-login main-center">
+            <img src="/photo.jpg" height="200" align="center"></img>
           <form onSubmit={this.submitSignUp}>
-            <FormGroup controlId="formHorizontalEmail"
-              validationState={this.getValidationState(this)}
-            >
-              <Col componentClass={ControlLabel} sm={2}>
-                Username:
-              </Col>
-              <Col sm={10}>
-
+            <div className="form-group">
+							<label for="name" classNameName="cols-sm-2 control-label">Username</label>
                 <FormControl
                   type="username"
                   value={this.state.username}
-                  placeholder="Enter Username"
-                  onChange={this.handleUsername.bind(this)}
-                />
-              </Col>
-              <FormControl.Feedback />
-            </FormGroup>
+                  placeholder="Username"
+                  onChange={this.handleUsername.bind(this)} />
+                  <FormControl.Feedback />
+                </div>
 
-            <FormGroup controlId="formHorizontalEmail"
-              validationState={this.getValidationState()}
-            >
-              <Col componentClass={ControlLabel} sm={2}>
-                Email:
-              </Col>
-              <Col sm={10}>
-
+            <div className="form-group">
+    					 <label for="name" className="cols-sm-2 control-label">Email</label>
                 <FormControl
                   type="email"
                   value={this.state.email}
-                  placeholder="Enter email"
+                  placeholder="Email"
                   onChange={this.handleChange.bind(this)}
                 />
-              </Col>
               <FormControl.Feedback />
-            </FormGroup>
-
-            <FormGroup controlId="formHorizontalPassword"
-              validationState={this.getValidationState()}
-              >
-              <Col componentClass={ControlLabel} sm={2}>
-                Password:
-              </Col>
-              <Col sm={10}>
+            </div>
+            <div className="form-group">
+						   <label for="name" className="cols-sm-2 control-label">Password</label>
                 <FormControl
                   type="password"
                   value={this.state.password}
-                  placeholder="Enter Password"
+                  placeholder="Password"
                   onChange={this.handlePassword.bind(this)}
                 />
-              </Col>
               <FormControl.Feedback />
-            </FormGroup>
-          <FormGroup>
-          <Col smOffset={2} sm={10}>
-            <Button type="submit">
-              Sign in
+            </div>
+            <div className="form-group">
+						   <label for="name" className="cols-sm-2 control-label">Phone Number</label>
+                <FormControl
+                  type="phone_number"
+                  value={this.state.phone_number}
+                  placeholder="Phone Number"
+                  onChange={this.handleNumber.bind(this)}
+                />
+              <FormControl.Feedback />
+            </div>
+            <div className="login-button">
+            <Button className="btn btn-danger btn-block" type="submit" >
+              Register
             </Button>
-          </Col>
-        </FormGroup>
+          </div>
         </form>
       </div>
+    </div>
+  </div>
     );
   }
 }

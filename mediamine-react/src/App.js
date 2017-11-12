@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import NavContainer from './containers/NavContainer';
 import CalendarContainer from './containers/CalendarContainer';
+import SignupContainer from './containers/SignUpComponents/SignupContainer';
+import UserFormContainer from './containers/SignUpComponents/UserFormContainer';
 import LoginContainer from './containers/LoginContainer';
-import SignupContainer from './containers/SignupContainer';
 import SportsContainer from './containers/SportsContainer';
 import MoviesContainer from './containers/MoviesContainer';
 import NewsContainer from './containers/NewsContainer';
@@ -20,7 +21,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
         <HomepageContainer />
-        <Route path='/signup' component={SignupContainer} />
+        <Route path='/signup' component={UserFormContainer} />
         <Route path='/login' component={LoginContainer} />
       </div>
     </BrowserRouter>
