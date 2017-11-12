@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class NBAStandingsContainer extends Component {
+export default class NFLStandingsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,14 +9,14 @@ export default class NBAStandingsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch(`https://api.mysportsfeeds.com/v1.1/pull/nba/2017-2018-regular/playoff_team_standings.json?teamstats=W,L,PTS,PTSA`,
+    fetch(`https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/division_team_standings.json?teamstats=W,L,T,PF,PA `,
     {
       headers: {"Authorization": "Basic " + btoa("najahizquierdo" + ":" + "RLgrime1")
       }
     })
       .then((response) => response.json())
       .then((responseJson) => {
-        this.setState({standings: responseJson.playoffteamstandings.conference});
+        this.setState({standings: responseJson.divisionteamstandings.division});
       })
       .catch((error) => {
         console.error(error);
@@ -25,7 +25,7 @@ export default class NBAStandingsContainer extends Component {
   render() {
     return (
       <div>
-        <h3>NBA Standings</h3>
+        <h3>NFL Standings</h3>
         <div className="standings">
           {this.state.standings.map(function (conf, i) {
             return (
@@ -34,7 +34,7 @@ export default class NBAStandingsContainer extends Component {
                 {conf.teamentry.map(function (team, i) {
                   return (
                     <div key={i}>
-                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]} | PF {team.stats.Pts["#text"]} | PA {team.stats.PtsAgainst["#text"]}</p>
+                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | T {team.stats.Ties["#text"]} | GP {team.stats.GamesPlayed["#text"]} | PF {team.stats.PointsFor["#text"]} | PA {team.stats.PointsAgainst["#text"]}</p>
                     </div>
                   )
                 })}

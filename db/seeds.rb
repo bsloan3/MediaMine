@@ -25,7 +25,7 @@ User.delete_all
 thomas = User.create(username: "thomas", email: "thomas@t.com", password: "1234", phone_number: "111-111-1111")
 
 movie1 = Movie.create(movie_name: "The Incredibles 2", movie_date: "2018-06-14", movie_image: "/hLa4UCNpor6Hz1JW2Gn3YpHtLBI.jpg")
-movie2 = Movie.create(movie_name: "Justice Legue", movie_date: "2017-11-15", movie_image: "/9rtrRGeRnL0JKtu9IMBWsmlmmZz.jpg")
+movie2 = Movie.create(movie_name: "Justice League", movie_date: "2017-11-15", movie_image: "/9rtrRGeRnL0JKtu9IMBWsmlmmZz.jpg")
 
 sport1 = Sport.create(sport_name: "baseball", team_name: "Red Sox", league_name: "Major League Baseball", division_name: "American")
 

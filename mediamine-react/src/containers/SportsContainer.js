@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import SportsNewsContainer from './SportsComponents/SportsNewsContainer';
 import NBAStandingsContainer from './SportsComponents/StandingsComponents/NBAStandingsContainer';
+import NHLStandingsContainer from './SportsComponents/StandingsComponents/NHLStandingsContainer';
+import NFLStandingsContainer from './SportsComponents/StandingsComponents/NFLStandingsContainer';
+import MLBStandingsContainer from './SportsComponents/StandingsComponents/MLBStandingsContainer';
 
 export default class SportsContainer extends Component {
   constructor(props) {
@@ -28,7 +31,12 @@ export default class SportsContainer extends Component {
         <div style={{width: '45%', height: '50%', overflowY: 'scroll', border: 'solid'}}>
           <SportsNewsContainer />
         </div>
-        <NBAStandingsContainer />
+        <div style={{width: '45%', height: '50%', overflowY: 'scroll', border: 'solid'}}>
+          <NBAStandingsContainer />
+          <NFLStandingsContainer />
+          <MLBStandingsContainer />
+          <NHLStandingsContainer />
+        </div>
       </div>
     );
   }
