@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SourceContainer from './SourceContainer';
+import SourceContainer from './NewsComponents/SourceContainer';
 
 export default class NewsContainer extends Component {
   constructor(props) {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Img from 'react-image'
 import CountDown from './CountDown'
+
 export default class MovieCountdowns extends Component {
   constructor(props) {
     super(props);
