@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from './SearchBar'
-import MovieResult from './MovieResult'
-import MovieCountdowns from './MovieCountdowns'
+import SearchBar from './MoviesComponents/SearchBar'
+import MovieResult from './MoviesComponents/MovieResult'
+import MovieCountdowns from './MoviesComponents/MovieCountdowns'
 
 export default class MoviesContainer extends Component {
     constructor(props) {

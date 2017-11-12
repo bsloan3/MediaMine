@@ -32,7 +32,7 @@ export default class NewsContainer extends Component {
               <p>Author: {article.author}</p>
               <p>{article.description}</p>
             </div>
-            )
+          )
         })}
       </div>
     );

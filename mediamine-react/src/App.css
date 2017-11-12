@@ -123,6 +123,7 @@ html, body, .app {
   padding-top: 25%;
   margin: auto;
   background-color: rgba(0,0,0, 0.5);
+}
 
 /* Countdown styles */
 .countdown{
@@ -250,4 +251,10 @@ html, body, .app {
 
 .movie {
   position: relative;
+}
+
+
+/*sports*/
+.standings{
+  column-count: 2;
 }
