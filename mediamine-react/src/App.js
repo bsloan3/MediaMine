@@ -10,7 +10,7 @@ import MoviesContainer from './containers/MoviesContainer';
 import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
-import HomepageContainer from './containers/HomepageContainer'
+import HomepageContainer from './containers/HomepageContainer';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 export default class App extends Component {
