@@ -17,7 +17,7 @@ class HomepageContainer extends Component {
     <div>
       <div class="video-background">
         <div class="video-foreground">
-          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"
+          <iframe src=""
           frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
@@ -30,18 +30,14 @@ class HomepageContainer extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <div className="homepage-nav-buttons">
-            <Link activeClassName='active' to='/signup'>
-            <div className="homepage-nav">
+            <Link className="unlogged" activeClassName='active' to='/signup'>
               Sign Up
-            </div>
-          </Link>
-              <Link activeClassName='active' to='/login'>
-              <div className="homepage-nav">
-                Login
-              </div>
             </Link>
-          </div>
+
+              <Link className="unlogged" activeClassName='active' to='/login'>
+              Login
+            </Link>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
