@@ -372,3 +372,9 @@ span.input-group-addon i {
 }
 
 /*End-of-SignUp*/
+
+/*carousel*/
+.slick-initialized.slick-slider {
+  width: 90% !important;
+  margin: 0 auto !important;
+}
