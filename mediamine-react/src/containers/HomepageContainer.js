@@ -30,14 +30,18 @@ class HomepageContainer extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <Link className="unlogged" activeClassName='active' to='/signup'>
+            <div className="homepage-nav-buttons">
+            <Link activeClassName='active' to='/signup'>
+            <div className="homepage-nav">
               Sign Up
+            </div>
+          </Link>
+              <Link activeClassName='active' to='/login'>
+              <div className="homepage-nav">
+                Login
+              </div>
             </Link>
-
-              <Link className="unlogged" activeClassName='active' to='/login'>
-              Login
-            </Link>
-
+          </div>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
