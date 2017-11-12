@@ -14,11 +14,13 @@ class HomepageContainer extends Component {
 
     render () {
       return (
-        <div>
-      <video id="background-video" loop autoPlay>
-          <source src={this.state.videoURL} type="video/mp4" />
-          <source src={this.state.videoURL} type="video/ogg" />
-      </video>
+    <div>
+      <div class="video-background">
+        <div class="video-foreground">
+          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"
+          frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
       <Navbar inverse collapseOnSelect className="navbar-fixed-top navBar">
         <Navbar.Header>
           <Navbar.Brand>
@@ -39,8 +41,8 @@ class HomepageContainer extends Component {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    </div>
 
+  </div>
         );
       }
     }
