@@ -32,7 +32,7 @@ export default class SportsContainer extends Component {
     return (
       <div className="page_container sports-page-container">
         <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Sports </h1>
-          <Tabs style={{backgorundColor: 'white'}}>
+          <Tabs style={{height: '70VH'}}>
             <TabList>
               <Tab>News</Tab>
               <Tab>Scores</Tab>
@@ -40,9 +40,9 @@ export default class SportsContainer extends Component {
             </TabList>
 
             <TabPanel>
-              <div style={{width: '90%', height: '70VH', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
+
                 <SportsNewsContainer />
-              </div>
+
             </TabPanel>
 
             <TabPanel>
@@ -53,19 +53,20 @@ export default class SportsContainer extends Component {
                   <Tab>MLB Scores</Tab>
                   <Tab>NHL Scores</Tab>
                 </TabList>
-
-                <TabPanel>
-                  <NBAScoresContainer />
-                </TabPanel>
-                <TabPanel>
-                  <NFLScoresContainer />
-                </TabPanel>
-                <TabPanel>
-                  <MLBScoresContainer />
-                </TabPanel>
-                <TabPanel>
-                  <NHLScoresContainer />
-                </TabPanel>
+                <div style={{width: '90%', height: '70VH', margin: '0 auto', overflowY: 'scroll'}}>
+                  <TabPanel>
+                    <NBAScoresContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <NFLScoresContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <MLBScoresContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <NHLScoresContainer />
+                  </TabPanel>
+                </div>
               </Tabs>
             </TabPanel>
 
@@ -78,18 +79,20 @@ export default class SportsContainer extends Component {
                   <Tab>NHL Standings</Tab>
                 </TabList>
 
-                <TabPanel>
-                  <NBAStandingsContainer />
-                </TabPanel>
-                <TabPanel>
-                  <NFLStandingsContainer />
-                </TabPanel>
-                <TabPanel>
-                  <MLBStandingsContainer />
-                </TabPanel>
-                <TabPanel>
-                  <NHLStandingsContainer />
-                </TabPanel>
+                <div style={{width: '90%', height: '70VH', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
+                  <TabPanel>
+                    <NBAStandingsContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <NFLStandingsContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <MLBStandingsContainer />
+                  </TabPanel>
+                  <TabPanel>
+                    <NHLStandingsContainer />
+                  </TabPanel>
+                </div>
               </Tabs>
             </TabPanel>
           </Tabs>

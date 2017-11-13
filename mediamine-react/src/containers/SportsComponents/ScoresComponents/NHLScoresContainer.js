@@ -25,13 +25,42 @@ export default class NHLScoresContainer extends Component {
   render() {
     return (
       <div>
-        <h3>NHL Scores</h3>
-        <div className="standings">
+        <div>
           {this.state.scores.map(function (game, i) {
             return (
-              <div key={i}>
-                {game.game.homeTeam.Abbreviation} {game.homeScore} - {game.game.awayTeam.Abbreviation} {game.awayScore}
+              <div className="complete-scoreboard" key={i}>
+                <div className="entire-scoreboard">
+                  <div className="hometeam">
+                    {game.game.homeTeam.Abbreviation}
+                  </div>
+                  <div className="scoreboard">
+                    {game.homeScore} - {game.awayScore}
+                  </div>
+                  <div className="awayteam">
+                    {game.game.awayTeam.Abbreviation}
+                  </div>
+                </div>
+                <div className="periods">
+                  {game.game.homeTeam.Abbreviation}
+                  {game.periodSummary.period.map(function (period, i) {
+                    return(
+                      <div className="period" key={i}>
+                        {period.homeScore}
+                      </div>
+                    )
+                  })}
+                </div>
+              <div className="periods">
+                {game.game.awayTeam.Abbreviation}
+                {game.periodSummary.period.map(function (period, i) {
+                  return(
+                    <div className="period" key={i}>
+                      {period.awayScore}
+                    </div>
+                  )
+                })}
               </div>
+            </div>
             )
           })}
         </div>

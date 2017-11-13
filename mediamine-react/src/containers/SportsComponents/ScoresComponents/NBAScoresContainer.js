@@ -25,13 +25,42 @@ export default class NBAScoresContainer extends Component {
   render() {
     return (
       <div>
-        <h3>NBA Scores</h3>
-        <div className="standings">
+        <div>
           {this.state.scores.map(function (game, i) {
             return (
-              <div key={i}>
-                {game.game.homeTeam.Abbreviation} {game.homeScore} - {game.game.awayTeam.Abbreviation} {game.awayScore}
+              <div className="complete-scoreboard" key={i}>
+                <div className="entire-scoreboard">
+                  <div className="hometeam">
+                    {game.game.homeTeam.Abbreviation}
+                  </div>
+                  <div className="scoreboard">
+                    {game.homeScore} - {game.awayScore}
+                  </div>
+                  <div className="awayteam">
+                    {game.game.awayTeam.Abbreviation}
+                  </div>
+                </div>
+                <div className="quarters">
+                  {game.game.homeTeam.Abbreviation}
+                  {game.quarterSummary.quarter.map(function (quarter, i) {
+                    return(
+                      <div className="quarter" key={i}>
+                        {quarter.homeScore}
+                      </div>
+                    )
+                  })}
+                </div>
+              <div className="quarters">
+                {game.game.awayTeam.Abbreviation}
+                {game.quarterSummary.quarter.map(function (quarter, i) {
+                  return(
+                    <div className="quarter" key={i}>
+                      {quarter.awayScore}
+                    </div>
+                  )
+                })}
               </div>
+            </div>
             )
           })}
         </div>
