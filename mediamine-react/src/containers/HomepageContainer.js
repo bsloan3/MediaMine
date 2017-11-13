@@ -14,34 +14,29 @@ class HomepageContainer extends Component {
 
     render () {
       return (
-    <div>
-      <div class="video-background">
-        <div class="video-foreground">
-          <iframe src=""
-          frameborder="0" allowfullscreen></iframe>
+      <div>
+        <Link className="homepage-nav" activeClassName='active' to='/login'>
+        <div className="login-button-word">Login</div>
+      </Link>
+          <Link className="homepage-nav" activeClassName='active' to='/signup'>
+          <div className="signup-button-word">Register</div>
+          </Link>
+
+      <div className="video-background">
+        <div className="video-foreground">
+          <iframe src=
+            "https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&mute=true&loop=13&playlist=W0LHTWG-UmQ"
+          frameborder="0" allowFullScreen></iframe>
         </div>
       </div>
-      <Navbar inverse collapseOnSelect className="navbar-fixed-top navBar">
-        <Navbar.Header>
-          <Navbar.Brand>
-              MediaMine
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-            <Link className="unlogged" activeClassName='active' to='/signup'>
-              Sign Up
-            </Link>
-
-              <Link className="unlogged" activeClassName='active' to='/login'>
-              Login
-            </Link>
-
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-
+      <div id="vidtop-content">
+        <div className="vid-info">
+    	  <h1>YouTube Fullscreen Background Demo</h1>
+    	  The International Space Station orbits the Earth every 92 minutes, with its crew seeing a sunrise 15 times a day. It exists as a scientific, educational, and engineering platform in low orbit, 330 to 435 kilometres above the Earth.
+         Original timelapse by Riccardo Rossi (ISAA), used under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Raw photos courtesy of http://eol.jsc.nasa.gov/
+    	 <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Full article</a>
+      </div>
+    </div>
   </div>
         );
       }

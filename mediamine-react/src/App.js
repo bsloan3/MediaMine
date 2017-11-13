@@ -19,9 +19,10 @@ export default class App extends Component {
   if(sessionStorage.length === 0){
     return (
       <BrowserRouter>
+        <Route path='/user-form' component={UserFormContainer} />
         <div>
         <HomepageContainer />
-        <Route path='/signup' component={UserFormContainer} />
+        <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
       </div>
     </BrowserRouter>
@@ -36,8 +37,8 @@ export default class App extends Component {
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
-
-          <div className="appbody">
+          <UserFormContainer />
+          {/* <div className="appbody">
             <div id="PodcastsContainer">
               <PodcastsContainer/>
             </div>
@@ -57,7 +58,7 @@ export default class App extends Component {
             <div id="YoutubeContainer" className="page">
               <YoutubeContainer/>
             </div>
-          </div>
+          </div> */}
         </div>
       </BrowserRouter>
       );

@@ -39,6 +39,8 @@ a:hover {
   font-weight: bold;
   color: #A7A7A7;
 
+
+
 }
 
 /*.navBar {
@@ -59,20 +61,6 @@ a:hover {
   padding-right: 25px;
   height: 50px;
   padding-top: 15px;
-}
-
-.homepage-nav {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
-  height: 50px;
-  padding-top: 15px;
-}
-
-.homepage-nav:hover {
-  background-color: red;
 }
 
 
@@ -114,9 +102,9 @@ html, body, .app {
 
 .popup {
   position: absolute;
-  margin-left: 78%;
-  margin-right: 2%;
+  margin-left: 80%;
   width: 20%;
+  top: 5%;
   height: 50%;
   background-color: #F53C3C;
 }
@@ -295,9 +283,9 @@ html, body, .app {
 	top: 0;
 	color: #fff;
 }
-.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info { position: absolute; top: 66%; right: 66%; width: 33%; background: #F53C3C; color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
 .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
-.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: #F54949; transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
 @media (min-aspect-ratio: 16/9) {
   .video-foreground { height: 300%; top: -100%; }
 }
@@ -357,9 +345,9 @@ padding: 8px 12px !important;
  	margin-top: 30px;
  	margin: 0 auto;
  	max-width: 400px;
-  padding-top: 50px;
+  /*padding-top: 50px;*/
     padding: 10px 40px;
-	background:#F54949;
+	background:#FF4C4C;
 	    color: #FFF;
     text-shadow: none;
 	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
@@ -381,13 +369,61 @@ span.input-group-addon i {
 	text-align: center;
 }
 .sign-up {
-  padding-top: 10%;
+  /*padding-top: 10%;*/
   padding-bottom: 10%;
   margin: 25px;
 }
 
 /*End-of-SignUp*/
 
+/*#homepage-sign-up {
+    position: absolute;
+    right: 10%;
+    float: right;
+    top: 1%;
+}
+
+#homepage-login {
+  position: absolute;
+  right: 2%;
+  float: right;
+  top: 1%;
+  width: 8%;
+}*/
+
+.homepage-nav {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  left: 90%;
+  float:right;
+  height: 50px;
+  background-color: #F53C3C;
+  top: 10%;
+
+}
+
+.homepage-nav:hover {
+  background-color: #F54949;
+}
+
+.signup-button-word{
+  text-align: center;
+  margin-top: 25%;
+
+}
+
+.login-button-word{
+  text-align: center;
+  margin-top: 35%;
+
+}
+
+
+.user-form {
+  padding-top: 50%;
+  background-color: white;
+=======
 /*carousel*/
 .slick-initialized.slick-slider {
   width: 90% !important;
@@ -420,4 +456,5 @@ span.input-group-addon i {
 
 .tab-panel {
   padding: 10px 50px;
+
 }
