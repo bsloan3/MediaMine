@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-import {Route, Link, NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 
 class HomepageContainer extends Component {
