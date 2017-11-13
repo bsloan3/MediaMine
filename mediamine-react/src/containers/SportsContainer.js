@@ -79,7 +79,7 @@ export default class SportsContainer extends Component {
                   <Tab>NHL Standings</Tab>
                 </TabList>
 
-                <div style={{width: '90%', height: '70VH', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
+                <div style={{width: '100%', height:'60VH', margin: '0 auto', overflowY: 'scroll', color:'black', fontWeight:'bold', backgroundColor:'rgba(46, 134, 63, .7)'}}>
                   <TabPanel>
                     <NBAStandingsContainer />
                   </TabPanel>

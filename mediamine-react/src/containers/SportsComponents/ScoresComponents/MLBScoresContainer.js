@@ -41,27 +41,32 @@ export default class MLBScoresContainer extends Component {
                       {game.game.awayTeam.Abbreviation}
                     </div>
                   </div>
-
-                  <div className="innings">
-                    {game.game.homeTeam.Abbreviation}
-                    {game.inningSummary.inning.map(function (inning, i) {
-                      return(
-                        <div className="inning" key={i}>
-                          {inning.homeScore}
-                        </div>
-                      )
-                    })}
-                  </div>
-                <div className="innings">
-                  {game.game.awayTeam.Abbreviation}
-                  {game.inningSummary.inning.map(function (inning, i) {
-                    return(
-                      <div className="inning" key={i}>
-                        {inning.awayScore}
-                      </div>
-                    )
-                  })}
-                </div>
+                  <table>
+                    <tr>
+                      <th></th>
+                      {game.inningSummary.inning.map(function (inning, i) {
+                        return(
+                          <th>{inning['@number']}</th>
+                        )
+                      })}
+                    </tr>
+                    <tr>
+                      <th>{game.game.homeTeam.Abbreviation}</th>
+                      {game.inningSummary.inning.map(function (inning, i) {
+                        return(
+                          <th>{inning.homeScore}</th>
+                        )
+                      })}
+                    </tr>
+                    <tr>
+                      <th>{game.game.awayTeam.Abbreviation}</th>
+                      {game.inningSummary.inning.map(function (inning, i) {
+                        return(
+                          <th>{inning.awayScore}</th>
+                        )
+                      })}
+                    </tr>
+                  </table>
               </div>
             </div>
             )
