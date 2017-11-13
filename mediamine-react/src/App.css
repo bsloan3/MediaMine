@@ -479,16 +479,33 @@ span.input-group-addon i {
   padding-bottom: 2%;
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
 }
 
 .react-tabs__tab-panel.react-tabs__tab-panel--selected {
-  /*text-align: center;*/
+  text-align: center;
 }
 
-.react-tabs__tab {
+.sports-page-container .react-tabs__tab {
   /*background-color: white;*/
-  background-color: black;
+  background-color: ForestGreen ;
   color: white;
+}
+
+.news-page-container .react-tabs__tab {
+  /*background-color: white;*/
+  background-color: RoyalBlue;
+  color: white;
+}
+
+.sports-page-container .react-tabs__tab--selected {
+  /*background-color: white;*/
+  background-color: DarkGreen !important;
+}
+
+.news-page-container .react-tabs__tab--selected {
+  /*background-color: white;*/
+  background-color: DarkBlue !important;
 }
 
 .react-tabs__tab-list{
@@ -546,13 +563,24 @@ span.input-group-addon i {
 
 .entire-scoreboard {
   text-align: center;
-  background-color: black;
+  background-color: DarkGreen;
   color: white;
   font-weight: bold;
 }
 
 .complete-scoreboard {
   margin: 2%;
+}
+
+table {
+  color: black;
+  width: 100%;
+  background-color: white;
+}
+
+tr th{
+  border: solid 1px;
+  text-align: center;
 }
 
 .quarters {

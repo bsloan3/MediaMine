@@ -25,11 +25,10 @@ export default class NFLStandingsContainer extends Component {
   render() {
     return (
       <div>
-        <h3>NFL Standings</h3>
         <div className="standings">
           {this.state.standings.map(function (conf, i) {
             return (
-              <div key={i}>
+              <div key={i} style={{textAlign: 'left', padding:'2%'}}>
                 <h4>{conf["@name"]}</h4>
                 {conf.teamentry.map(function (team, i) {
                   return (

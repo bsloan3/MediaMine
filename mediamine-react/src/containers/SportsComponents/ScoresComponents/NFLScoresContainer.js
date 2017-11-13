@@ -40,26 +40,32 @@ export default class NFLScoresContainer extends Component {
                     {game.game.awayTeam.Abbreviation}
                   </div>
                 </div>
-                <div className="quarters">
-                  {game.game.homeTeam.Abbreviation}
-                  {game.quarterSummary.quarter.map(function (quarter, i) {
-                    return(
-                      <div className="quarter" key={i}>
-                        {quarter.homeScore}
-                      </div>
-                    )
-                  })}
-                </div>
-              <div className="quarters">
-                {game.game.awayTeam.Abbreviation}
-                {game.quarterSummary.quarter.map(function (quarter, i) {
-                  return(
-                    <div className="quarter" key={i}>
-                      {quarter.awayScore}
-                    </div>
-                  )
-                })}
-              </div>
+                <table>
+                  <tr>
+                    <th></th>
+                    {game.quarterSummary.quarter.map(function (quarter, i) {
+                      return(
+                        <th>{quarter['@number']}</th>
+                      )
+                    })}
+                  </tr>
+                  <tr>
+                    <th>{game.game.homeTeam.Abbreviation}</th>
+                    {game.quarterSummary.quarter.map(function (quarter, i) {
+                      return(
+                        <th>{quarter.homeScore}</th>
+                      )
+                    })}
+                  </tr>
+                  <tr>
+                    <th>{game.game.awayTeam.Abbreviation}</th>
+                    {game.quarterSummary.quarter.map(function (quarter, i) {
+                      return(
+                        <th>{quarter.awayScore}</th>
+                      )
+                    })}
+                  </tr>
+                </table>
             </div>
             )
           })}

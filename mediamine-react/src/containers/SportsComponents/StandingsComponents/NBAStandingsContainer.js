@@ -25,16 +25,15 @@ export default class NBAStandingsContainer extends Component {
   render() {
     return (
       <div>
-        <h3>NBA Standings</h3>
         <div className="standings">
           {this.state.standings.map(function (conf, i) {
             return (
-              <div key={i}>
+              <div key={i} style={{textAlign: 'left', padding:'2%'}}>
                 <h4>{conf["@name"]}</h4>
                 {conf.teamentry.map(function (team, i) {
                   return (
                     <div key={i}>
-                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]} | PF {team.stats.Pts["#text"]} | PA {team.stats.PtsAgainst["#text"]}</p>
+                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]}</p>
                     </div>
                   )
                 })}
