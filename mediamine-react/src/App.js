@@ -12,7 +12,7 @@ import NewsContainer from './containers/NewsContainer';
 import YoutubeContainer from './containers/YoutubeContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Router} from 'react-router-dom';
 
 export default class App extends Component {
   render() {
@@ -20,11 +20,12 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
+        <Route path='/user-form' component={UserFormContainer} />
         <HomepageContainer />
-        <Route path='/signup' component={UserFormContainer} />
+        <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
       </div>
-    </BrowserRouter>
+      </BrowserRouter>
       );
     }
 
@@ -36,7 +37,7 @@ export default class App extends Component {
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
-
+          <UserFormContainer />
           <div className="appbody">
             <div id="PodcastsContainer">
               <PodcastsContainer/>

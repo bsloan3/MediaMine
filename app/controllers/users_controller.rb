@@ -6,9 +6,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(username: params[:user][:username], email: params[:user][:email], phone_number: params[:user][:phone_number], password: params[:user][:password])
-    render json: @user
     if @user.save
       session[:user_id] = @user.id
+      
+      render json: @user
     else
       @errors = "Try again."
     end

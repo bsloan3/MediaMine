@@ -25,7 +25,7 @@ export default class NavContainer extends Component {
   render() {
       return(
           <div>
-          <Scrollspy items={ ['sports-item', 'news-item', 'podcasts-item-item'], ['youtube-item'] } currentClassName="is-current">
+        <Scrollspy items={ ['sports-item', 'news-item', 'podcasts-item-item'], ['youtube-item'] } currentClassName="is-current">
         <Navbar inverse collapseOnSelect fixedTop className="navBar">
           <Navbar.Header>
             <Navbar.Brand>
@@ -38,6 +38,11 @@ export default class NavContainer extends Component {
             Sports
           </div>
         </a>
+        <a id="movies-item" className="nav-item" href="#MoviesContainer">
+          <div className="stuff">
+          Movies
+        </div>
+      </a>
           <a id="news-item" className="nav-item" href="#NewsContainer">
             <div className="stuff">
               News
@@ -52,6 +57,11 @@ export default class NavContainer extends Component {
             <div className="stuff">
               Youtube
             </div>
+          </a>
+          <a className="nav-item" onClick="/user-form">
+            <Link activeClassName='active' to='/user-form'>
+              Edit Preferences
+            </Link>
           </a>
           <a className="nav-item" onClick={this.logOut}>
             <Link activeClassName='active' to='/logout'>
