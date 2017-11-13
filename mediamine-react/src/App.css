@@ -6,14 +6,27 @@
    position: relative;
    width: 100%; /* for IE 6 */
    align-items: center;
-   margin: 2%;
 }
+
+.article-description {
+  background-color: black;
+  color: white;
+  padding: 2%;
+  /*font-size: 200%;*/
+  height: 10VH;
+}
+
+.news-img img{
+  height: 100%;
+  width: 100%;
+}
+
 .news-img .news-article {
    position: absolute;
    bottom: 0%;
+   width: 100%;
    padding-bottom: 3%;
    padding-top: 3%;
-   width: 50%;
    left: 0;
    color: white;
    text-align: center;
@@ -312,7 +325,7 @@ html, body, .app {
 
 .form-control {
     height: auto!important;
-padding: 8px 12px !important;
+    padding: 8px 12px !important;
 }
 .input-group {
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
@@ -460,16 +473,43 @@ span.input-group-addon i {
 }
 
 .react-tabs {
-  background-color: white;
+  /*background-color: white;*/
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
 }
 
 .react-tabs__tab-panel.react-tabs__tab-panel--selected {
-  /*text-align: center;*/
+  text-align: center;
+}
+
+.sports-page-container .react-tabs__tab {
+  /*background-color: white;*/
+  background-color: ForestGreen ;
+  color: white;
+}
+
+.news-page-container .react-tabs__tab {
+  /*background-color: white;*/
+  background-color: RoyalBlue;
+  color: white;
+}
+
+.sports-page-container .react-tabs__tab--selected {
+  /*background-color: white;*/
+  background-color: DarkGreen !important;
+}
+
+.news-page-container .react-tabs__tab--selected {
+  /*background-color: white;*/
+  background-color: DarkBlue !important;
+}
+
+.react-tabs__tab-list{
+  border: none !important;
 }
 /*page containers*/
 
@@ -506,6 +546,7 @@ span.input-group-addon i {
 }
 
 
+
 .horizontal-scroll-wrapper {
   float: right;
   padding-left: 75%;
@@ -520,4 +561,83 @@ span.input-group-addon i {
 
 .search-query {
   left: 80%;
+}
+/*scoreboard*/
+.hometeam {
+  display: inline-block;
+  padding: 2%;
+}
+
+.awayteam {
+  display: inline-block;
+  padding: 2%;
+}
+
+.scoreboard {
+  display: inline-block;
+  padding: 2%;
+}
+
+.entire-scoreboard {
+  text-align: center;
+  background-color: DarkGreen;
+  color: white;
+  font-weight: bold;
+}
+
+.complete-scoreboard {
+  margin: 2%;
+}
+
+table {
+  color: black;
+  width: 100%;
+  background-color: white;
+}
+
+tr th{
+  border: solid 1px;
+  text-align: center;
+}
+
+.quarters {
+  text-align: center;
+  background-color: Gainsboro;
+}
+
+.quarter {
+  width: 20%;
+  border: solid 1px;
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+}
+
+.innings {
+  text-align: center;
+  background-color: Gainsboro;
+}
+
+.inning {
+  width: 10%;
+  border: solid 1px;
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+}
+
+.periods {
+  text-align: center;
+  background-color: Gainsboro;
+}
+
+.period {
+  width: 25%;
+  border: solid 1px;
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
 }

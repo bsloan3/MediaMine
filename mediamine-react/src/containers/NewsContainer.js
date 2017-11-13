@@ -24,15 +24,14 @@ export default class NewsContainer extends Component {
     return (
       <div className="page_container news-page-container">
         <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> News </h1>
-        <div style={{width: '75%', height: '80%', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
-          <Tabs>
-            <TabList>
-            {this.state.news_sources.map(function (source) {
-                return (
-                  <Tab style={{textTransform: 'uppercase'}}> {source} </Tab>
-                )
-              })}
-            </TabList>
+        <Tabs>
+          <TabList>
+          {this.state.news_sources.map(function (source) {
+              return (
+                <Tab style={{textTransform: 'uppercase'}}> {source} </Tab>
+              )
+            })}
+          </TabList>
             {this.state.news_sources.map(function (source) {
               return (
                 <div>
@@ -42,8 +41,7 @@ export default class NewsContainer extends Component {
                 </div>
               )
             })}
-          </Tabs>
-        </div>
+        </Tabs>
       </div>
     );
   }
