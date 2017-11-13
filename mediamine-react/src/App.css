@@ -545,6 +545,23 @@ span.input-group-addon i {
   height: 100VH;
 }
 
+
+
+.horizontal-scroll-wrapper {
+  float: right;
+  padding-left: 75%;
+
+}
+
+
+.custom-search-input {
+        margin:0;
+        padding-left: 80%;
+    }
+
+.search-query {
+  left: 80%;
+}
 /*scoreboard*/
 .hometeam {
   display: inline-block;
