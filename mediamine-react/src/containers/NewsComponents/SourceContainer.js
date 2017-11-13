@@ -1,4 +1,27 @@
 import React, { Component } from 'react';
+import Slider from 'react-slick';
+
+function SampleNextArrow(props) {
+const {className, style, onClick} = props
+return (
+  <div
+    className={className}
+    style={{...style, display: 'block'}}
+    onClick={onClick}
+  ></div>
+);
+}
+
+function SamplePrevArrow(props) {
+const {className, style, onClick} = props
+return (
+  <div
+    className={className}
+    style={{...style, display: 'block'}}
+    onClick={onClick}
+  ></div>
+);
+}
 
 export default class NewsContainer extends Component {
   constructor(props) {
@@ -19,20 +42,36 @@ export default class NewsContainer extends Component {
       });
     }
   render() {
+    var settings = {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
+          style: {
+            height: "50VH"
+          }
+        };
     return (
       <div>
-        {this.state.embed_links.map(function (article) {
-          return (
-            <div>
-              <div className="news-img">
-                <img style={{width: '50%', height: '70%'}} src={article.urlToImage}/>
-                <a className="news-article" href={article.url} target="_blank">{article.title}</a>
+        <Slider {...settings}>
+          {this.state.embed_links.map(function (article) {
+            return (
+              <div>
+                <div className="news-img">
+                  <img src={article.urlToImage}/>
+                  <a className="news-article" href={article.url} target="_blank">{article.title}</a>
+                </div>
+                <div className="article-description">
+                  {article.description}
+                  {article.author}
+                </div>
               </div>
-              <p>{article.description}</p>
-              <p>Author: {article.author}</p>
-            </div>
-          )
-        })}
+            )
+          })}
+        </Slider>
       </div>
     );
   }
