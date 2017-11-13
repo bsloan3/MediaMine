@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/users/:id/podcasts', to: 'podcasts#index'
   get '/users/:id/news', to: 'news#index'
   get '/users/:id/movies', to: 'movies#index'
+  post '/users/:id/movies', to: 'interests#addmovie'
   get '/users/:id/tvshows', to: 'tvshows#index'
   get '/users/:id/sports', to: 'sports#index'
   get '/podcasts', to:'podcasts#home'

@@ -19,6 +19,7 @@ export default class SearchBar extends Component {
      .then( response => response.json())
      .then( responseJson => {
         this.props.onUpdate(responseJson.results);
+        // console.log(this.props.onUpdate(responseJson.results))
       })
      .catch(function(error){
        console.log('Fetch Error', error);

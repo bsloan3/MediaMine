@@ -6,12 +6,12 @@ import MovieCountdowns from './MoviesComponents/MovieCountdowns'
 export default class MoviesContainer extends Component {
     constructor(props) {
       super(props);
-      this.state = {result: []}
+      this.state = {results: []}
       this.updateResult = this.updateResult.bind(this);
     }
 
   updateResult(newResult) {
-    this.setState({result: newResult})
+    this.setState({results: newResult})
   }
 
   componentDidMount(){
@@ -30,7 +30,8 @@ export default class MoviesContainer extends Component {
 
         <h1>Movies</h1>
         <SearchBar onUpdate={this.updateResult} />
-        <div className="movie-result"> <MovieResult newMovie={this.state.result}/></div>
+        <div className="movie-result">
+        <MovieResult newMovie={this.state.results}/></div>
         <MovieCountdowns />
       </div>
     );
