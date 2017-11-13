@@ -56,17 +56,18 @@ export default class PodcastContainer extends Component {
           }
         };
     return (
-      <div className="page_container">
+      <div className="page_container podcasts-page-container">
 
-        <h1 style={{marginTop: '5%'}}> Podcasts </h1>
-
-        <Slider {...settings}>
-          {this.state.embed_links.map(function (podcast) {
-            return (
-              <div><iframe width="98%" margin="2%" height="450" scrolling="no" frameBorder="no" src={podcast}></iframe></div>
-              )
-          })}
-        </Slider>
+        <h1 style={{paddingRight: '5%', paddingTop: '7%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Podcasts </h1>
+        <div style={{paddingTop: '15%', paddingBottom: '2%'}}>
+          <Slider {...settings}>
+            {this.state.embed_links.map(function (podcast) {
+              return (
+                <div><iframe width="98%" margin="2%" height="450" scrolling="no" frameBorder="no" src={podcast}></iframe></div>
+                )
+            })}
+          </Slider>
+        </div>
       </div>
     );
   }

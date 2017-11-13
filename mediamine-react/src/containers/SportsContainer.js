@@ -30,10 +30,9 @@ export default class SportsContainer extends Component {
   }
   render() {
     return (
-      <div className="page_container">
-        <h1 style={{marginTop: '5%'}}> Sports </h1>
-        <div style={{width: '75%', height: '90%', margin: '0 auto', overflowY: 'scroll', border: 'solid'}}>
-          <Tabs>
+      <div className="page_container sports-page-container">
+        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Sports </h1>
+          <Tabs style={{backgorundColor: 'white'}}>
             <TabList>
               <Tab>News</Tab>
               <Tab>Scores</Tab>
@@ -41,8 +40,11 @@ export default class SportsContainer extends Component {
             </TabList>
 
             <TabPanel>
-              <SportsNewsContainer />
+              <div style={{width: '90%', height: '70VH', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
+                <SportsNewsContainer />
+              </div>
             </TabPanel>
+
             <TabPanel>
               <Tabs>
                 <TabList>
@@ -66,6 +68,7 @@ export default class SportsContainer extends Component {
                 </TabPanel>
               </Tabs>
             </TabPanel>
+
             <TabPanel>
               <Tabs>
                 <TabList>
@@ -90,7 +93,6 @@ export default class SportsContainer extends Component {
               </Tabs>
             </TabPanel>
           </Tabs>
-        </div>
       </div>
     );
   }

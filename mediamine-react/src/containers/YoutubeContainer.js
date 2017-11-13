@@ -5,7 +5,7 @@ export default class YoutubeContainer extends Component {
     return (
       <div className="page_container">
 
-        <h1 style={{marginTop: '5%'}}> YouTube </h1>
+        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> YouTube </h1>
 
       </div>
     );

@@ -458,3 +458,49 @@ span.input-group-addon i {
   padding: 10px 50px;
 
 }
+
+.react-tabs {
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.react-tabs__tab-panel.react-tabs__tab-panel--selected {
+  /*text-align: center;*/
+}
+/*page containers*/
+
+.sports-page-container {
+  background-image: url("/images/sports-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100VH;
+}
+
+.news-page-container {
+  background-image: url("/images/news-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100VH;
+}
+
+.podcasts-page-container {
+  background-image: url("/images/podcasts-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100VH;
+}
+
+.movies-page-container {
+  background-image: url("/images/movies-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100VH;
+}
