@@ -17,6 +17,5 @@ class InterestsController < ApplicationController
       render json: @new_movie.errors
     end
   end
-
-  def 
+  
 end

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Img from 'react-image'
 import CountDown from './CountDown'
+import $ from 'jquery';
+import moment from 'moment';
 
 export default class MovieCountdowns extends Component {
   constructor(props) {
@@ -9,7 +11,6 @@ export default class MovieCountdowns extends Component {
       movies:[]
     };
   }
-
   componentDidMount(){
     fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
       .then((response) => response.json())
@@ -22,11 +23,13 @@ export default class MovieCountdowns extends Component {
   }
 
 
+
   render() {
     return(
 
       <div className="horizontal-scroll-wrapper">
         {this.state.movies.map(function (movie, i) {
+          if(moment().isSameOrBefore(movie.movie_date)) {
           return (
             <div key={i} className="movie">
               <CountDown movie_date={movie.movie_date}/>
@@ -34,7 +37,7 @@ export default class MovieCountdowns extends Component {
               <h2>{movie.movie_name}</h2>
               <h4>{(new Date(movie.movie_date)).toString()}</h4>
             </div>
-            )
+          )}
         })}
       </div>
     );
