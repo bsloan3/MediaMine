@@ -29,10 +29,9 @@ export default class MoviesContainer extends Component {
       <div className="page_container">
 
         <h1>Movies</h1>
-        <MovieCountdowns />
         <SearchBar onUpdate={this.updateResult} />
         <div className="movie-result"> <MovieResult newMovie={this.state.result}/></div>
-
+        <MovieCountdowns />
       </div>
     );
   }

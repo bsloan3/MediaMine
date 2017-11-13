@@ -1,4 +1,27 @@
 import React, { Component } from 'react';
+import Slider from 'react-slick';
+
+function SampleNextArrow(props) {
+const {className, style, onClick} = props
+return (
+  <div
+    className={className}
+    style={{...style, display: 'block'}}
+    onClick={onClick}
+  ></div>
+);
+}
+
+function SamplePrevArrow(props) {
+const {className, style, onClick} = props
+return (
+  <div
+    className={className}
+    style={{...style, display: 'block'}}
+    onClick={onClick}
+  ></div>
+);
+}
 
 export default class PodcastContainer extends Component {
 
@@ -18,18 +41,32 @@ export default class PodcastContainer extends Component {
         console.error(error);
       });
   }
+
   render() {
+    var settings = {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
+          style: {
+            width: "90%"
+          }
+        };
     return (
       <div className="page_container">
 
         <h1 style={{marginTop: '5%'}}> Podcasts </h1>
 
-        {this.state.embed_links.map(function (podcast) {
-          return (
-            <iframe width="30%" height="450" scrolling="no" frameborder="no" src={podcast}></iframe>
-            )
-        })}
-
+        <Slider {...settings}>
+          {this.state.embed_links.map(function (podcast) {
+            return (
+              <div><iframe width="98%" margin="2%" height="450" scrolling="no" frameBorder="no" src={podcast}></iframe></div>
+              )
+          })}
+        </Slider>
       </div>
     );
   }
