@@ -28,10 +28,10 @@ export default class MovieCountdowns extends Component {
         {this.state.movies.map(function (movie, i) {
           return (
             <div key={i} className="movie">
+              <CountDown movie_date={movie.movie_date}/>
               <img className="photoimg" src= {'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + (movie.movie_image)} />
               <h2>{movie.movie_name}</h2>
               <h4>{(new Date(movie.movie_date)).toString()}</h4>
-              <CountDown movie_date={movie.movie_date}/>
             </div>
             )
         })}

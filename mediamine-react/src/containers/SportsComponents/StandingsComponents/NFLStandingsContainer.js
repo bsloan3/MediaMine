@@ -9,7 +9,7 @@ export default class NFLStandingsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch(`https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/division_team_standings.json?teamstats=W,L,T,PF,PA `,
+    fetch(`https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/division_team_standings.json?teamstats=W,L,T,PF,PA`,
     {
       headers: {"Authorization": "Basic " + btoa("najahizquierdo" + ":" + "RLgrime1")
       }

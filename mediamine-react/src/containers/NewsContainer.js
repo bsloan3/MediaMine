@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SourceContainer from './NewsComponents/SourceContainer';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export default class NewsContainer extends Component {
   constructor(props) {
@@ -23,13 +24,26 @@ export default class NewsContainer extends Component {
     return (
       <div className="page_container">
         <h1 style={{marginTop: '5%'}}> News </h1>
-        {this.state.news_sources.map(function (source) {
-          return (
-            <div style={{width: '45%', height: '50%', overflowY: 'scroll', border: 'solid'}}>
-              <SourceContainer source={source}/>
-            </div>
-          )
-        })}
+        <div style={{width: '75%', height: '90%', margin: '0 auto', overflowY: 'scroll', border: 'solid'}}>
+          <Tabs>
+            <TabList>
+            {this.state.news_sources.map(function (source) {
+                return (
+                  <Tab style={{marginTop: '3%', textTransform: 'uppercase'}}> {source} </Tab>
+                )
+              })}
+            </TabList>
+            {this.state.news_sources.map(function (source) {
+              return (
+                <div>
+                  <TabPanel>
+                    <SourceContainer source={source}/>
+                  </TabPanel>
+                </div>
+              )
+            })}
+          </Tabs>
+        </div>
       </div>
     );
   }
