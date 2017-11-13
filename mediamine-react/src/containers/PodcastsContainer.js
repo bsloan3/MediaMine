@@ -14,8 +14,7 @@ export default class PodcastContainer extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({embed_links: responseJson});
-      })
-      .catch((error) => {
+      }).catch((error) => {
         console.error(error);
       });
   }

@@ -53,6 +53,11 @@ export default class NavContainer extends Component {
               Youtube
             </div>
           </a>
+          <a className="nav-item" onClick="/user-form">
+            <Link activeClassName='active' to='/user-form'>
+              Edit Preferences
+            </Link>
+          </a>
           <a className="nav-item" onClick={this.logOut}>
             <Link activeClassName='active' to='/logout'>
             <div className="stuff">
