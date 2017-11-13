@@ -22,14 +22,14 @@ export default class NewsContainer extends Component {
   }
   render() {
     return (
-      <div className="page_container">
-        <h1 style={{marginTop: '5%'}}> News </h1>
-        <div style={{width: '75%', height: '90%', margin: '0 auto', overflowY: 'scroll', border: 'solid'}}>
+      <div className="page_container news-page-container">
+        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> News </h1>
+        <div style={{width: '75%', height: '80%', margin: '0 auto', overflowY: 'scroll', backgroundColor: 'Gainsboro'}}>
           <Tabs>
             <TabList>
             {this.state.news_sources.map(function (source) {
                 return (
-                  <Tab style={{marginTop: '3%', textTransform: 'uppercase'}}> {source} </Tab>
+                  <Tab style={{textTransform: 'uppercase'}}> {source} </Tab>
                 )
               })}
             </TabList>

@@ -26,9 +26,9 @@ export default class MoviesContainer extends Component {
   }
   render() {
     return (
-      <div className="page_container">
+      <div className="page_container movies-page-container">
 
-        <h1>Movies</h1>
+        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Movies </h1>
         <SearchBar onUpdate={this.updateResult} />
         <div className="movie-result"> <MovieResult newMovie={this.state.result}/></div>
         <MovieCountdowns />

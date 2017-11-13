@@ -59,7 +59,7 @@ export default class SignupContainer extends Component {
       <div>
       <div className="sign-up">
         	<div className="main-login main-center">
-            <img src="/photo.jpg" height="200" align="center"></img>
+            <img src="./images/photo.jpg" height="200" align="center"></img>
           <form onSubmit={this.submitSignUp}>
             <div className="form-group">
 							<label for="name" classNameName="cols-sm-2 control-label">Username</label>
