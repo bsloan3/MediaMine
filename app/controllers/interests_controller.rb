@@ -1,10 +1,14 @@
 class InterestsController < ApplicationController
 
-  # def addpodcast
-  #   @podcast = Podcast.create!()
-  #   @new_podcast = Interest.new(user: user, interestable: podcast)
-  #   render json: @new_podcast
-  # end
+  def addpodcast
+    @podcast = Podcast.find_by(name: params[:podcast][:podcast_name])
+    @new_podcast = Interest.new(user_id: params[:user_id].to_i, interestable: @podcast)
+    if @new_podcast.save
+      render json: @new_podcast
+    else
+      render json: @new_podcast.errors
+    end
+  end
 
   def addmovie
     @movie = Movie.create!(movie_name: params[:movie][:movie_name],
@@ -17,5 +21,5 @@ class InterestsController < ApplicationController
       render json: @new_movie.errors
     end
   end
-  
+
 end

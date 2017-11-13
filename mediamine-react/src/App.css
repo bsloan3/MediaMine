@@ -504,3 +504,20 @@ span.input-group-addon i {
   background-size: cover;
   height: 100VH;
 }
+
+
+.horizontal-scroll-wrapper {
+  float: right;
+  padding-left: 75%;
+
+}
+
+
+.custom-search-input {
+        margin:0;
+        padding-left: 80%;
+    }
+
+.search-query {
+  left: 80%;
+}

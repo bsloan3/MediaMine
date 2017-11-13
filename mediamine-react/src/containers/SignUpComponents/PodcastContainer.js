@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import PodcastDisplay from './SignUpForms/PodcastDisplay'
 
 export default class PodcastContainer extends Component {
   constructor(props) {
@@ -21,21 +22,18 @@ export default class PodcastContainer extends Component {
     fetch('http://localhost:5000/podcasts/')
      .then( response => response.json())
      .then( responseJson => {
-      //  console.log(this.state.value)
        responseJson.map((podcast, i) => {
         if(podcast.podcast_name === this.state.value)
-        // console.log(podcast.podcast)
-        // console.log(this.state.value)
           this.state.result.push(podcast)
        }
      )
-      console.log(this.state.result)
-       return this.state.result
     })
        .catch(function(error){
          console.log('Fetch Error', error);
        });
     }
+
+
 
     render() {
       return(

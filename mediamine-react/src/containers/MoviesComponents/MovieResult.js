@@ -3,6 +3,7 @@ import Img from 'react-image';
 import {Button} from 'react-bootstrap'
 import axios from 'axios';
 import MovieInformation from './MovieInformation'
+import moment from 'moment';
 export default class MovieResult extends Component {
   constructor(props){
     super(props)
@@ -37,9 +38,11 @@ export default class MovieResult extends Component {
 
       <div className="horizontal-scroll-wrapper">
         {this.props.newMovie.map((movie, i) => {
+          console.log(movie)
+          if(moment().isSameOrBefore(movie.release_date || movie.first_air_date)) {
           return(
            <MovieInformation key={i} addMovie={this.addMovie} movie={movie}/>
-          )
+         )}
         })}
 
       </div>

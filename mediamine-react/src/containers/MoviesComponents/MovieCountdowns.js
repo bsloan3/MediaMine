@@ -26,8 +26,7 @@ export default class MovieCountdowns extends Component {
 
   render() {
     return(
-
-      <div className="horizontal-scroll-wrapper">
+      <div>
         {this.state.movies.map(function (movie, i) {
           if(moment().isSameOrBefore(movie.movie_date)) {
           return (
