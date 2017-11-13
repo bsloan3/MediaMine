@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'react-tabs/style/react-tabs.css';
 
 export default class SportsNewsContainer extends Component {
   constructor(props) {
@@ -21,16 +22,15 @@ export default class SportsNewsContainer extends Component {
   render() {
     return (
       <div>
-        <h3 style={{marginTop: '3%', textTransform: 'uppercase'}}> {this.state.source} </h3>
+        <h3 style={{marginTop: '3%', marginLeft: '3%',textTransform: 'uppercase'}}> {this.state.source} </h3>
         {this.state.embed_links.map(function (article) {
           return (
-            <div>
-              <div className="news-img">
-                <img style={{width: '70%', height: '70%'}} src={article.urlToImage}/>
-                <a className="news-article" href={article.url} target="_blank">{article.title}</a>
+            <div className="news-img">
+              <img style={{width: '50%', height: '50%'}} src={article.urlToImage}/>
+              <div className="news-article">
+                <a href={article.url} target="_blank">{article.title}</a>
+                <p>{article.description}</p>
               </div>
-              <p>Author: {article.author}</p>
-              <p>{article.description}</p>
             </div>
           )
         })}
