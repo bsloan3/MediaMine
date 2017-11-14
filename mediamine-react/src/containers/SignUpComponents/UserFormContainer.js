@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {Route, Link, NavLink} from 'react-router-dom';
 import PodcastContainer from './PodcastContainer'
+import PodcastDisplay from './SignUpForms/PodcastDisplay'
 
 class UserFormContainer extends Component {
   constructor(props){
@@ -17,6 +18,7 @@ class UserFormContainer extends Component {
       <div className="user-form">
         <div id="PodcastsContainer">
           <PodcastContainer onUpdate={this.updateResult} />
+          <PodcastDisplay />
         </div>
           {/* <SportsSignUp />
           <MovieSignUp />

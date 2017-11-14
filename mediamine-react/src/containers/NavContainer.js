@@ -33,9 +33,19 @@ export default class NavContainer extends Component {
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
+          <a id="podcasts-item" className="nav-item" href="#PodcastsContainer">
+            <div className="stuff">
+              Podcasts
+            </div>
+          </a>
           <a id="sports-item" className="nav-item" href="#SportsContainer">
             <div className="stuff">
             Sports
+          </div>
+        </a>
+        <a id="news-item" className="nav-item" href="#NewsContainer">
+          <div className="stuff">
+            News
           </div>
         </a>
         <a id="movies-item" className="nav-item" href="#MoviesContainer">
@@ -43,33 +53,32 @@ export default class NavContainer extends Component {
           Movies
         </div>
       </a>
-          <a id="news-item" className="nav-item" href="#NewsContainer">
-            <div className="stuff">
-              News
-            </div>
-          </a>
-          <a id="podcasts-item" className="nav-item" href="#PodcastsContainer">
-            <div className="stuff">
-              Podcasts
-            </div>
-          </a>
-          <a id="games-item" className="nav-item" href="#GamesContainer">
-            <div className="stuff">
-              Games
-            </div>
-          </a>
-          <a className="nav-item" onClick="/user-form">
-            <Link activeClassName='active' to='/user-form'>
-              Edit Preferences
-            </Link>
-          </a>
-          <a className="nav-item" onClick={this.logOut}>
-            <Link activeClassName='active' to='/logout'>
-            <div className="stuff">
+
+      <a id="games-item" className="nav-item" href="#GamesContainer">
+        <div className="stuff">
+          Games
+        </div>
+      </a>
+        
+      <a id="music-item" className="nav-item" href="#MusicContainer">
+        <div className="stuff">
+          Music
+        </div>
+      </a>
+
+      <a className="nav-item" onClick="/user-form">
+        <Link activeClassName='active' to='/user-form'>
+          Settings
+        </Link>
+      </a>
+        
+      <a className="nav-item" onClick={this.logOut}>
+        <Link activeClassName='active' to='/logout'>
+          <div className="stuff">
             Log Out
           </div>
-            </Link>
-          </a>
+        </Link>
+      </a>
     </Navbar>
   </Scrollspy>
 
