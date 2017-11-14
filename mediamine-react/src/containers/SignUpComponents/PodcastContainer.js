@@ -23,18 +23,17 @@ export default class PodcastContainer extends Component {
      .then( response => response.json())
      .then( responseJson => {
        responseJson.map((podcast, i) => {
-        if(podcast.podcast_name === this.state.value)
-          this.state.result.push(podcast)
+        if(podcast.podcast_name === this.state.value) {
+          this.setState({result: podcast})
+        }
        }
      )
     })
        .catch(function(error){
          console.log('Fetch Error', error);
        });
+       let {podcast} = this.props
     }
-
-
-
     render() {
       return(
         <div>
@@ -42,8 +41,8 @@ export default class PodcastContainer extends Component {
               <input onChange={this.handleChange} value={this.state.value} id="search" type="text" placeholder="Search Podcasts" name="value" />
           </form>
           <i className="fa fa-search"></i>
-          <PodcastDisplay myPodcast={this.handleSubmit} />
-        </div>
-      );
-    }
+        })
+    </div>
+    );
+  }
 }

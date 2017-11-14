@@ -647,3 +647,20 @@ tr th{
   padding-right: 1%;
   text-align: center;
 }
+
+/*games*/
+/*.games {
+  margin: 0 auto;
+}*/
+
+.news-icon{
+  height:60px;
+  width:60px;
+}
+
+.news-list {
+  align:center;
+  min-width: 200px;
+  display: inline-block;
+}
+
