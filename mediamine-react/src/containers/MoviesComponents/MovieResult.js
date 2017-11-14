@@ -14,9 +14,6 @@ export default class MovieResult extends Component {
     }
     this.addMovie = this.addMovie.bind(this)
   }
-  componentDidMount() {
-
-  }
 
   addMovie(movie){
     let my_url = 'http://localhost:5000/users/'+sessionStorage.user_id+'/movies';
