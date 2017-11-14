@@ -90,6 +90,7 @@ export default class NewsDisplay extends Component {
     render() {
       return(
         <div>
+          <h1> Choose your favorite news sources! </h1>
           {this.state.sources.map(function (source, i) {
             return (
               <div key={i} className="news-list">

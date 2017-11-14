@@ -5,7 +5,7 @@ import PodcastContainer from './PodcastContainer';
 import PodcastDisplay from './SignUpForms/PodcastDisplay';
 import NewsFormContainer from './NewsFormContainer';
 import NewsDisplay from './NewsDisplay'
-
+import SportsSignUp from './SportsSignUp'
 class UserFormContainer extends Component {
   constructor(props){
     super(props);
@@ -22,10 +22,11 @@ class UserFormContainer extends Component {
           {/* <PodcastContainer onUpdate={this.updateResult} />
           <PodcastDisplay onUpdate={this.updateResult} /> */}
           <NewsDisplay  />
+          <SportsSignUp />
         </div>
-          {/* <SportsSignUp />
+{/*
           <MovieSignUp />
-          <PodcastsContainer /> */}
+          <PodcastsContainer />  */}
         </div>
         );
       }

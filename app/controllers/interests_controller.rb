@@ -10,6 +10,19 @@ class InterestsController < ApplicationController
     end
   end
 
+  def addsport
+    @sport = Sport.create!(sport_name: params[:sports][:sport_name], league_name:
+      params[:sports][:league_name], team_name: params[:sports][:team_name],
+      division_name: params[:sports][:division_name])
+    @new_sport = Interest.new(user_id: params[:user_id].to_i, interestable: @sport)
+    if @new_sport.save
+      render json: @new_sport
+    else
+      render json: @new_sport.errors
+    end
+  end
+
+
   def addmovie
     @movie = Movie.create!(movie_name: params[:movie][:movie_name],
     movie_date: params[:movie][:movie_date],
