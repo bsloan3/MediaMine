@@ -18,6 +18,7 @@ NewsOutlet.delete_all
 Tvshow.delete_all
 Sport.delete_all
 Movie.delete_all
+CalendarEvent   .delete_all
 User.delete_all
 
 
@@ -143,3 +144,6 @@ Interest.create(user: thomas, interestable: pod3)
 Interest.create(user: thomas, interestable: pod4)
 Interest.create(user: thomas, interestable: pod5)
 Interest.create(user: thomas, interestable: pod6)
+
+CalendarEvent.create(user:thomas, title: "Demo", start: "2017-11-17 02:30:00", end: "2017-11-17 03:00:00")
+CalendarEvent.create(user:thomas, title: "Test", start: "2017-11-13 02:30:00", end: "2017-11-17 03:00:00")

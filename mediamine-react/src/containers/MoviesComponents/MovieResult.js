@@ -23,19 +23,19 @@ export default class MovieResult extends Component {
         movie_name: movie.title,
         movie_date: movie.release_date,
         movie_image: movie.poster_path
+      }
     }
-  }
 
     axios.post(my_url, data).then(res => {
-    window.location.reload()
-  })
-}
+      window.location.reload()
+    })
+  }
   render() {
     return(
 
       <div className="horizontal-scroll-wrapper">
         {this.props.newMovie.map((movie, i) => {
-          console.log(movie)
+          // console.log(movie)
           if(moment().isSameOrBefore(movie.release_date || movie.first_air_date)) {
           return(
            <MovieInformation key={i} addMovie={this.addMovie} movie={movie}/>

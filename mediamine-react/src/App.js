@@ -38,6 +38,9 @@ export default class App extends Component {
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
+          <div id="CalendarContainer" className="page">
+            <CalendarContainer/>
+          </div>
           <div className="appbody">
             <div id="PodcastsContainer">
               <PodcastsContainer/>
@@ -47,9 +50,9 @@ export default class App extends Component {
               <SportsContainer/>
             </div>
 
-            <div id="NewsContainer" className="page">
+            {/* <div id="NewsContainer" className="page">
               <NewsContainer/>
-            </div>
+            </div> */}
 
             <div id="MoviesContainer" className="page">
               <MoviesContainer/>
