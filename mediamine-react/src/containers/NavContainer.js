@@ -53,23 +53,32 @@ export default class NavContainer extends Component {
           Movies
         </div>
       </a>
-        <a id="youtube-item" className="nav-item" href="#YoutubeContainer">
+
+      <a id="games-item" className="nav-item" href="#GamesContainer">
+        <div className="stuff">
+          Games
+        </div>
+      </a>
+        
+      <a id="music-item" className="nav-item" href="#MusicContainer">
+        <div className="stuff">
+          Music
+        </div>
+      </a>
+
+      <a className="nav-item" onClick="/user-form">
+        <Link activeClassName='active' to='/user-form'>
+          Settings
+        </Link>
+      </a>
+        
+      <a className="nav-item" onClick={this.logOut}>
+        <Link activeClassName='active' to='/logout'>
           <div className="stuff">
-            Youtube
+            Log Out
           </div>
-        </a>
-        <a className="nav-item" onClick="/user-form">
-          <Link activeClassName='active' to='/user-form'>
-            Settings
-          </Link>
-        </a>
-        <a className="nav-item" onClick={this.logOut}>
-          <Link activeClassName='active' to='/logout'>
-            <div className="stuff">
-              Log Out
-            </div>
-          </Link>
-        </a>
+        </Link>
+      </a>
     </Navbar>
   </Scrollspy>
 

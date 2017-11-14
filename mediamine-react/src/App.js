@@ -9,9 +9,10 @@ import LoginContainer from './containers/LoginContainer';
 import SportsContainer from './containers/SportsContainer';
 import MoviesContainer from './containers/MoviesContainer';
 import NewsContainer from './containers/NewsContainer';
-import YoutubeContainer from './containers/YoutubeContainer';
+import GamesContainer from './containers/GamesContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
+import MusicContainer from './containers/MusicContainer';
 import {BrowserRouter, Route, Router} from 'react-router-dom';
 
 export default class App extends Component {
@@ -54,8 +55,12 @@ export default class App extends Component {
               <MoviesContainer/>
             </div>
 
-            <div id="YoutubeContainer" className="page">
-              <YoutubeContainer/>
+            <div id="MusicContainer" className="page">
+              <MusicContainer/>
+            </div>
+
+            <div id="GamesContainer" className="page">
+              <GamesContainer/>
             </div>
           </div>
         </div>
