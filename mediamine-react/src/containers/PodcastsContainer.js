@@ -59,7 +59,7 @@ export default class PodcastContainer extends Component {
       <div className="page_container podcasts-page-container">
 
         <h1 style={{paddingRight: '5%', paddingTop: '7%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Podcasts </h1>
-        <div style={{paddingTop: '15%', paddingBottom: '2%'}}>
+        <div style={{paddingBottom: '2%'}}>
           <Slider {...settings}>
             {this.state.embed_links.map(function (podcast) {
               return (

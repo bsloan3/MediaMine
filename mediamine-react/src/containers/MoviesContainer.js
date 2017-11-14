@@ -30,8 +30,11 @@ export default class MoviesContainer extends Component {
 
         <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Movies </h1>
         <SearchBar onUpdate={this.updateResult} />
-        <div className="movie-result">
-        <MovieResult newMovie={this.state.results}/></div>
+        <div style={{width: '40%', height: '70VH', float:'right', paddingRight:'3%', overflowY: 'scroll'}}>
+          <div className="movie-result">
+            <MovieResult newMovie={this.state.results}/>
+          </div>
+        </div>
         <MovieCountdowns />
       </div>
     );
