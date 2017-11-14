@@ -648,11 +648,16 @@ tr th{
   text-align: center;
 }
 
-/*games*/
-/*.games {
-  margin: 0 auto;
-}*/
+/*music*/
+.player {
+  display: block;
+}
 
+.hide {
+  display: none;
+}
+
+/*news*/
 .news-icon{
   height:60px;
   width:60px;
@@ -663,4 +668,3 @@ tr th{
   min-width: 200px;
   display: inline-block;
 }
-

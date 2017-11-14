@@ -50,15 +50,15 @@ export default class App extends Component {
               <SportsContainer/>
             </div>
 
-            {/* <div id="NewsContainer" className="page">
+            <div id="NewsContainer" className="page">
               <NewsContainer/>
-            </div> */}
+            </div>
 
             <div id="MoviesContainer" className="page">
               <MoviesContainer/>
             </div>
 
-            <div id="MusicContainer" className="page">
+            <div style={{position: 'fixed', bottom: '0', width: '25%', height: '25%'}}>
               <MusicContainer/>
             </div>
 

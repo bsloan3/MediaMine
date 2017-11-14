@@ -59,19 +59,13 @@ export default class NavContainer extends Component {
           Games
         </div>
       </a>
-        
-      <a id="music-item" className="nav-item" href="#MusicContainer">
-        <div className="stuff">
-          Music
-        </div>
-      </a>
 
       <a className="nav-item" onClick="/user-form">
         <Link activeClassName='active' to='/user-form'>
           Settings
         </Link>
       </a>
-        
+
       <a className="nav-item" onClick={this.logOut}>
         <Link activeClassName='active' to='/logout'>
           <div className="stuff">
