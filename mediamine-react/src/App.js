@@ -20,7 +20,6 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
-        <Route path='/user-form' component={UserFormContainer} />
         <HomepageContainer />
         <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
@@ -34,10 +33,10 @@ export default class App extends Component {
         <BrowserRouter>
         <div className="App">
           <div className="Nav">
+            <Route path='/user-form' component={UserFormContainer} />
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
-          <UserFormContainer />
           <div className="appbody">
             <div id="PodcastsContainer">
               <PodcastsContainer/>

@@ -42,6 +42,7 @@ export default class PodcastContainer extends Component {
               <input onChange={this.handleChange} value={this.state.value} id="search" type="text" placeholder="Search Podcasts" name="value" />
           </form>
           <i className="fa fa-search"></i>
+          <PodcastDisplay myPodcast={this.handleSubmit} />
         </div>
       );
     }
