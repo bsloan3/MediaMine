@@ -53,9 +53,9 @@ export default class NavContainer extends Component {
               Podcasts
             </div>
           </a>
-          <a id="youtube-item" className="nav-item" href="#YoutubeContainer">
+          <a id="games-item" className="nav-item" href="#GamesContainer">
             <div className="stuff">
-              Youtube
+              Games
             </div>
           </a>
           <a className="nav-item" onClick="/user-form">

@@ -8,6 +8,10 @@ import NBAStandingsContainer from './SportsComponents/StandingsComponents/NBASta
 import NHLStandingsContainer from './SportsComponents/StandingsComponents/NHLStandingsContainer';
 import NFLStandingsContainer from './SportsComponents/StandingsComponents/NFLStandingsContainer';
 import MLBStandingsContainer from './SportsComponents/StandingsComponents/MLBStandingsContainer';
+import NBAMyteamContainer from './SportsComponents/MyteamComponents/NBAMyteamContainer';
+import NHLMyteamContainer from './SportsComponents/MyteamComponents/NHLMyteamContainer';
+import NFLMyteamContainer from './SportsComponents/MyteamComponents/NFLMyteamContainer';
+import MLBMyteamContainer from './SportsComponents/MyteamComponents/MLBMyteamContainer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export default class SportsContainer extends Component {
@@ -95,6 +99,7 @@ export default class SportsContainer extends Component {
                 </div>
               </Tabs>
             </TabPanel>
+
           </Tabs>
       </div>
     );
