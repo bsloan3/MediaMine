@@ -1,8 +1,12 @@
-class CalendarEventController < ApplicationController
+class CalendarEventsController < ApplicationController
 
   def index
-    database_events = CalEvents.where(user_id: params[:id])
-    render :json => database_events.to_json
+    database_events = CalendarEvent.where(user_id: params[:id])
+    cal_events = []
+    database_events.each do |event|
+      cal_events.push({title: event.title, start: event.start, end: event.end})
+    end
+    render :json => cal_events.to_json
   end
 
   def create

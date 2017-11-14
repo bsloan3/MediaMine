@@ -5,57 +5,36 @@ import queryString from 'query-string';
 import BigCalendar from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
-function getMovies () {
-  return axios.get('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
-  .then(function (cal){
-    return cal.movies
-  });
-}
+// function getCalendarEvents(user_id) {
+//   return
+// }
 
 export default class Calendar extends Component {
   constructor(props){
     super(props)
     this.state = {
-      events: null,
+      events: [],
     }
   }
 
-  // componentDidMount() {
-  //   fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
-  //     .then((response) => response.json())
-  //     .then((responseJson) => {
-  //       var CAT = responseJson)
-
-    // fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
-    //   .then((response) => response.json())
-    //   .then((responseJson) => {
-    //     this.setState({embed_links: responseJson});
-    //     console.log(responseJson)
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
-  //     }
-  // }
+  componentDidMount() {
+    var user_id = sessionStorage.user_id;
+    axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
+    .then( cal => {
+      this.setState({events: cal.data});
+    })
+    .catch(err => {
+    });
+  }
 
 
   render() {
+    var events = this.state.events
     BigCalendar.momentLocalizer(moment);
     const MyCalendar = props => (
       <div style={{paddingTop: '5%', textAlign: 'center'}}>
         <BigCalendar
-
-          events={[  {
-    'title': 'All Day Event very long title',
-    'allDay': true,
-    'start': new Date(2017, 11, 0),
-    'end': new Date(2017, 11, 1)
-  },
-  {
-    'title': 'Long Event',
-    'start': new Date(2017, 11, 7),
-    'end': new Date(2017, 11, 10)
-  }]}
+          events={events}
           defaultDate={new Date(2017, 11, 1)}
         />
       </div>
