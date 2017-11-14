@@ -22,4 +22,16 @@ class InterestsController < ApplicationController
     end
   end
 
+  def addnews
+    @news = NewsOutlet.create!(outlet_name: params[:news][:outlet_name])
+    @new_news = Interest.new(user_id: params[:user_id].to_i,
+      interestable: @news)
+    if @new_news.save
+      render json: @new_news
+    else
+      render json: @new_news.errors
+    end
+  end
+
+
 end

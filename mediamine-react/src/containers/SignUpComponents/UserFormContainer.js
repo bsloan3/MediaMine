@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {Route, Link, NavLink} from 'react-router-dom';
-import PodcastContainer from './PodcastContainer'
-import PodcastDisplay from './SignUpForms/PodcastDisplay'
+import PodcastContainer from './PodcastContainer';
+import PodcastDisplay from './SignUpForms/PodcastDisplay';
+import NewsFormContainer from './NewsFormContainer';
+import NewsDisplay from './NewsDisplay'
 
 class UserFormContainer extends Component {
   constructor(props){
@@ -17,12 +19,12 @@ class UserFormContainer extends Component {
       return (
       <div className="user-form">
         <div id="PodcastsContainer">
-          <PodcastContainer onUpdate={this.updateResult} />
-          <PodcastDisplay />
+          {/* <PodcastContainer onUpdate={this.updateResult} />
+          <PodcastDisplay onUpdate={this.updateResult} /> */}
+          <NewsDisplay  />
         </div>
           {/* <SportsSignUp />
           <MovieSignUp />
-          <NewsSignUp />
           <PodcastsContainer /> */}
         </div>
         );
