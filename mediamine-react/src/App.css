@@ -257,11 +257,9 @@ html, body, .app {
 }
 
 .movie {
-  width: 25%;
   display:inline-block;
-  margin-right: 2%;
-  margin-left: 2%;
   position: relative;
+  height: 50%;
 }
 
 .movie h2{
@@ -269,7 +267,8 @@ html, body, .app {
 }
 
 .photoimg{
-  width: 100%;
+  margin: 0 auto;
+  /*width: 100%;*/
 }
 
 /*sports*/
@@ -441,6 +440,13 @@ span.input-group-addon i {
 .slick-initialized.slick-slider {
   width: 90% !important;
   margin: 0 auto !important;
+}
+
+.movies-page-container .slick-initialized.slick-slider {
+  width: 50% !important;
+  margin: 0 !important;
+  margin-left: 7% !important;
+  height: 70VH;
 }
 
 /*tabs*/
