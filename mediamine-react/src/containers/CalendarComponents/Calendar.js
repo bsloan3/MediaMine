@@ -20,8 +20,12 @@ export default class Calendar extends Component {
     }
   }
 
-  componentDidMount() {
-    getMovies()
+  // componentDidMount() {
+  //   fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
+  //     .then((response) => response.json())
+  //     .then((responseJson) => {
+  //       var CAT = responseJson)
+
     // fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
     //   .then((response) => response.json())
     //   .then((responseJson) => {
@@ -31,7 +35,8 @@ export default class Calendar extends Component {
     //   .catch((error) => {
     //     console.error(error);
     //   });
-  }
+  //     }
+  // }
 
 
   render() {
