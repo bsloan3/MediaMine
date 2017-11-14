@@ -23,9 +23,8 @@ class SportsSignUp extends Component {
       }
     }
     axios.post(my_url, data).then(res => {
-
-
-      window.location.reload()
+      this.setState({data: res })
+      console.log(res)
     });
   }
 
@@ -33,11 +32,11 @@ class SportsSignUp extends Component {
     return(
       <div>
 
-        <Button onClick={this.addSport} value="nhl"> NHL </Button>
-        <Button onClick={this.addSport} value="mlb"> MLB </Button>
-        <Button onClick={this.addSport} value="nfl"> NFL </Button>
-        <Button onClick={this.addSport} value="nba"> NBA </Button>
-
+        <Button onClick={this.addSport.bind(this, this.state.hockey)}> NHL </Button>
+        <Button onClick={this.addSport.bind(this, this.state.baseball)}> MLB </Button>
+        <Button onClick={this.addSport.bind(this, this.state.football)}> NFL </Button>
+        <Button onClick={this.addSport.bind(this, this.state.basketball)}> NBA </Button>
+ */}
 
        </div>
     )
