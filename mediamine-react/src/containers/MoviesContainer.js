@@ -28,7 +28,7 @@ export default class MoviesContainer extends Component {
     return (
       <div className="page_container movies-page-container">
 
-        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Movies </h1>
+        <h1 style={{paddingRight: '5%', paddingTop: '7%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> Movies </h1>
         <SearchBar onUpdate={this.updateResult} />
         <div style={{width: '40%', height: '70VH', float:'right', paddingRight:'3%', overflowY: 'scroll'}}>
           <div className="movie-result">

@@ -10,7 +10,7 @@ BigCalendar.setLocalizer(
 export default class Calendar extends Component {
   render() {
     return(
-      <div style={{paddingTop: '5%', textAlign: 'center'}}>
+      <div className="calendar_container calendar-page-container" style={{paddingTop: '5%', textAlign: 'center'}}>
         <BigCalendar
           events={this.props.events}
           defaultDate={new Date(2017, 11, 1)}
