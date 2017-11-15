@@ -75,13 +75,7 @@ export default class NavContainer extends Component {
       </a>
 
 
-      <a className="nav-item" onClick={this.logOut}>
-        <Link activeClassName='active' to='/logout'>
-          <div className="stuff">
-            Log Out
-          </div>
-        </Link>
-      </a>
+
 
       <li className="dropdown">
         <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Settings <span className="caret"></span></a>
