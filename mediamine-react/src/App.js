@@ -19,7 +19,6 @@ import {BrowserRouter, Route, Router} from 'react-router-dom';
 // import UpcomingMovies from './containers/SignUpComponents/UpcomingMovies'
 import axios from 'axios';
 import moment from 'moment';
-import CalendarContainer from './containers/CalendarContainer';
 import BigCalendar from 'react-big-calendar';
 
 export default class App extends Component {
@@ -33,15 +32,11 @@ export default class App extends Component {
 
   componentDidMount() {
     var user_id = sessionStorage.user_id;
-    // debugger
     axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
     .then( cal => {
-      // this.setState({events: cal.data});
       let events = cal.data.map(e => {
         return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
       });
-
-      console.log(events)
       this.setState({events})
     })
     .catch(err => {
@@ -73,9 +68,6 @@ export default class App extends Component {
           </div>
           <div className="appbody">
 
-          <div id="CalendarContainer" className="page">
-            <CalendarContainer/>
-          </div>
           <div id="Calendar" className="page">
             <Calendar events={this.state.events}/>
           </div>
