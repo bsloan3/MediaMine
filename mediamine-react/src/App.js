@@ -31,17 +31,42 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    var user_id = sessionStorage.user_id;
-    axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
-    .then( cal => {
-      let events = cal.data.map(e => {
-        return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
-      });
-      this.setState({events})
-    })
-    .catch(err => {
+
+  var user_id = sessionStorage.user_id;
+  axios.get('http://localhost:5000/users/' + user_id + '/movies/')
+  .then( cal => {
+    let events = cal.data.map(e => {
+      return {title: e.movie_name, start: new Date(e.movie_date), end: new Date(e.movie_date)}
     });
-  }
+    this.setState({events})
+  })
+  .catch(err => {
+  });
+}
+  // componentDidMount() {
+  //   let calendarevents = [];
+  //   let cal_2_evenets = [];
+  //   var user_id = sessionStorage.user_id;
+  //   axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
+  //   .then( cal => {
+  //     let calendarevents = cal.data.map(e => {
+  //       return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
+  //     });
+  //   this.setState({events: calendarevents}
+  //   })
+
+// axios.get('http://localhost:5000/users/'+user_id+'/movies/')
+//   .then((responseJson) => {
+//     let cal_2_evenets = responseJson.map(e => {
+//       return {title: e.title, start: new Date(e.start), end: new Date(e.end)};
+//     })
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+// debugger
+// this.setState({events: calendarevents});
+// }
 
   render() {
   if(sessionStorage.length === 0){
