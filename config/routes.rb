@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/users/:id/sports', to: 'sports#index'
   get '/podcasts', to:'podcasts#home'
   get '/users/:id/calendarevents', to: 'calendar_events#index'
+  get '/users/:user_id/podcasts/:id', to: 'podcasts#show'
 
   post '/users/:id/sports', to: 'interests#addsport'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

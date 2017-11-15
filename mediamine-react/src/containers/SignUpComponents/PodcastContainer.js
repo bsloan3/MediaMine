@@ -26,7 +26,6 @@ export default class PodcastContainer extends Component {
        responseJson.map((podcast, i) => {
         if(podcast.podcast_name === this.state.value) {
           this.setState({result: [podcast]})
-          // console.log(podcast)
         }
        }
      )
