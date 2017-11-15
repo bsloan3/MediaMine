@@ -10,6 +10,7 @@ export default class CalendarContainer extends Component {
     return (
       <div>
         <Calendar events={events}/>
+      
       </div>
     );
   }

@@ -5,6 +5,9 @@ import axios from 'axios';
 import Scrollspy from 'react-scrollspy';
 import {DropdownMenu} from 'react-bootstrap-dropdown-menu';
 import UserFormContainer from './SignUpComponents/UserFormContainer';
+import PodcastContainer from './SignUpComponents/PodcastContainer';
+import NewsDisplay from './SignUpComponents/NewsDisplay'
+
 
 export default class NavContainer extends Component {
   constructor(props) {
@@ -71,13 +74,13 @@ export default class NavContainer extends Component {
         <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Settings <span className="caret"></span></a>
         <ul className="dropdown-menu">
           <li>
-            <Link id="modal_trigger" activeClassName='active' to="/podcasts">Podcasts</Link>
+            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Podcasts</a>
           </li>
           <li>
-            <Link activeClassName='active' to="/news">News</Link>
+            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2">News</a>
           </li>
           <li>
-            <Link activeClassName='active' to="/sports">Sports</Link>
+            <a activeClassName='active' to="/sports">Sports</a>
           </li>
           <li>
           <a className="nav-item" onClick={this.logOut}>
@@ -93,6 +96,8 @@ export default class NavContainer extends Component {
 
 
     </Navbar>
+  <PodcastContainer/>
+  <NewsDisplay/>
   </Scrollspy>
 
   </div>

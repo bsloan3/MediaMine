@@ -14,7 +14,7 @@ import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
 import MusicContainer from './containers/MusicContainer';
 import PodcastContainer from './containers/SignUpComponents/PodcastContainer'
-import NewsFormContainer from './containers/SignUpComponents/NewsFormContainer'
+import NewsDisplay from './containers/SignUpComponents/NewsDisplay'
 import {BrowserRouter, Route, Router} from 'react-router-dom';
 // import UpcomingMovies from './containers/SignUpComponents/UpcomingMovies'
 import axios from 'axios';
@@ -67,7 +67,7 @@ export default class App extends Component {
           <div className="Nav">
             {/* <Route path='/settings' component={UserFormContainer} /> */}
             <Route path='/podcasts' component={PodcastContainer} />
-            <Route path='/news' component={NewsFormContainer} />
+            <Route path='/news' component={NewsDisplay} />
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
