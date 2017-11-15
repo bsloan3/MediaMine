@@ -65,6 +65,7 @@ a:hover {
 
 .nav-item {
   display: inline-block;
+  width:11%;
 }
 
 .stuff {
@@ -104,6 +105,7 @@ a:hover {
 h1 {
   margin: 0;
   padding: 0;
+  font-size: 30px;
 }
 html, body, .app {
   margin: 0;
@@ -111,9 +113,13 @@ html, body, .app {
   position: relative;
   width: 100%;
   height: 100vh;
+  font-family: 'Passion One', 'cursive';
+  font-size: 20px;
+  font-stretch: expanded;
 }
 
 .popup {
+  font-size: 15px;
   position: absolute;
   margin-left: 80%;
   width: 20%;
@@ -667,4 +673,26 @@ tr th{
   align:center;
   min-width: 200px;
   display: inline-block;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    float: right;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }

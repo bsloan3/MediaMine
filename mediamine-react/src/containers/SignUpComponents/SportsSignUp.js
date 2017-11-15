@@ -7,6 +7,10 @@ class SportsSignUp extends Component {
 
     this.state = {
       sportInfo: [],
+      hockey: 'nhl',
+      baseball: 'mlb',
+      football: 'nhl',
+      basketball: 'nba',
       sports: {
         team_name: '',
         league_name: ''
@@ -36,7 +40,6 @@ class SportsSignUp extends Component {
         <Button onClick={this.addSport.bind(this, this.state.baseball)}> MLB </Button>
         <Button onClick={this.addSport.bind(this, this.state.football)}> NFL </Button>
         <Button onClick={this.addSport.bind(this, this.state.basketball)}> NBA </Button>
- */}
 
        </div>
     )

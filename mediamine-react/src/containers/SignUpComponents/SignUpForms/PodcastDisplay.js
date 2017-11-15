@@ -23,21 +23,20 @@ export default class PodcastDisplay extends Component {
     }
 
     axios.post(my_url, data).then(res => {
-      window.location.reload()
-      debugger
+      // debugger
     })
   }
+
   render () {
+    let {podcast} = this.props
     return(
           <div>
           <center>
           <h2>{this.props.podcast.podcast_name}</h2>
-          <p>{this.props.podcast.podcast_embed}</p>
           <Button onClick={this.addPodcast.bind(null, this.props.podcast)}>
            Add
          </Button>
        </center>
-     })}
       </div>
 
     );

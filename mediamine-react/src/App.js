@@ -13,9 +13,13 @@ import GamesContainer from './containers/GamesContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
 import MusicContainer from './containers/MusicContainer';
+import PodcastContainer from './containers/SignUpComponents/PodcastContainer'
+import NewsFormContainer from './containers/SignUpComponents/NewsFormContainer'
 import {BrowserRouter, Route, Router} from 'react-router-dom';
+// import UpcomingMovies from './containers/SignUpComponents/UpcomingMovies'
 import axios from 'axios';
 import moment from 'moment';
+import CalendarContainer from './containers/CalendarContainer';
 import BigCalendar from 'react-big-calendar';
 
 export default class App extends Component {
@@ -61,14 +65,21 @@ export default class App extends Component {
         <BrowserRouter>
         <div className="App">
           <div className="Nav">
-            <Route path='/user-form' component={UserFormContainer} />
+            {/* <Route path='/settings' component={UserFormContainer} /> */}
+            <Route path='/podcasts' component={PodcastContainer} />
+            <Route path='/news' component={NewsFormContainer} />
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
+          </div>
+          <div className="appbody">
+
+          <div id="CalendarContainer" className="page">
+            <CalendarContainer/>
           </div>
           <div id="Calendar" className="page">
             <Calendar events={this.state.events}/>
           </div>
-          <div className="appbody">
+
             <div id="PodcastsContainer">
               <PodcastsContainer/>
             </div>
