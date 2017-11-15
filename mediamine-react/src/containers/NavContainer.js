@@ -37,7 +37,7 @@ export default class NavContainer extends Component {
                 MediaMine
             </Navbar.Brand>
           </Navbar.Header>
-          <a id="calendar-item" className="nav-item" href="#CalendarContainer">
+          <a id="calendar-item" className="nav-item" href="#Calendar">
             <div className="stuff">
               Calendar
             </div>
@@ -69,7 +69,6 @@ export default class NavContainer extends Component {
           Games
         </div>
       </a>
-
 
         <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Settings <span className="caret"></span></a>
         <ul className="dropdown-menu">

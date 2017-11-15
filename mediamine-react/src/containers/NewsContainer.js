@@ -23,7 +23,7 @@ export default class NewsContainer extends Component {
   render() {
     return (
       <div className="page_container news-page-container">
-        <h1 style={{paddingRight: '5%', paddingTop: '4%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> News </h1>
+        <h1 style={{paddingRight: '5%', paddingTop: '7%', paddingBottom: '2%', color: 'white', textAlign: 'right'}}> News </h1>
         <Tabs>
           <TabList>
           {this.state.news_sources.map(function (source) {

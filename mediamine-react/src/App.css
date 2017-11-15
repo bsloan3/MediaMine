@@ -9,11 +9,11 @@
 }
 
 .article-description {
-  background-color: black;
-  color: white;
+  background-color: gray;
+  color: black;
   padding: 2%;
-  /*font-size: 200%;*/
-  height: 10VH;
+  border: solid 1px;
+  height: 100%;
 }
 
 .news-img img{
@@ -49,7 +49,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #A7A7A7;
 
 
@@ -65,22 +65,34 @@ a:hover {
 
 .nav-item {
   display: inline-block;
-  width:11%;
+  /*height: 100%;*/
+  /*width:11%;*/
+}
+
+.navbar-header {
+  padding-top: .3%;
+  display: inline-block !important;
+  height: 100% !important;
+}
+
+.navbar-header span {
+  font-family: 'Arial', 'cursive' !important;
+  font-size: 20px !important;
+  height: 100% !important;
+  vertical-align: middle !important;
 }
 
 .stuff {
-  width: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  padding: 15px 15px;
   height: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
-  height: 50px;
-  padding-top: 15px;
+  vertical-align: middle;
 }
 
-
-
 .stuff:hover {
-  background-color: red;
+  background-color: gray;
+  color: black;
 }
 
 .email-component {
@@ -113,7 +125,7 @@ html, body, .app {
   position: relative;
   width: 100%;
   height: 100vh;
-  font-family: 'Passion One', 'cursive';
+  font-family: 'Arial', 'cursive';
   font-size: 20px;
   font-stretch: expanded;
 }
@@ -500,7 +512,7 @@ span.input-group-addon i {
 
 .sports-page-container .react-tabs__tab {
   /*background-color: white;*/
-  background-color: ForestGreen ;
+  background-color: Sienna;
   color: white;
 }
 
@@ -512,7 +524,7 @@ span.input-group-addon i {
 
 .sports-page-container .react-tabs__tab--selected {
   /*background-color: white;*/
-  background-color: DarkGreen !important;
+  background-color: SaddleBrown !important;
 }
 
 .news-page-container .react-tabs__tab--selected {
@@ -592,7 +604,7 @@ span.input-group-addon i {
 
 .entire-scoreboard {
   text-align: center;
-  background-color: DarkGreen;
+  background-color: SaddleBrown;
   color: white;
   font-weight: bold;
 }
@@ -697,6 +709,12 @@ tr th{
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
+/*calendar*/
+.rbc-calendar {
+  height: 70VH !important;
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 .popup-podcast {
   font-size: 20px;
