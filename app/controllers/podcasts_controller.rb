@@ -6,11 +6,13 @@ class PodcastsController < ApplicationController
   end
 
   def home
-    @podcasts = Podcast.all
+    @podcasts_all = Podcast.all
     if params[:search]
-      @podcast = Podcast.search(params[:search]).order("created_at DESC").uniq
+      @podcast_search = Podcast_all.search(params[:search]).order("created_at DESC").uniq
+      @podcast = @podcast_search [0..2]
     else
       @podcast = Podcast.all.order("created_at DESC").uniq
+      @podcast = @podcast_search [0..2]
     end
     render json: @podcast
   end
