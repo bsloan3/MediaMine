@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavContainer from './containers/NavContainer';
-import CalendarContainer from './containers/CalendarContainer';
+import Calendar from './containers/Calendar';
 import SignupContainer from './containers/SignUpComponents/SignupContainer';
 import UserFormContainer from './containers/SignUpComponents/UserFormContainer';
 import LoginContainer from './containers/LoginContainer';
@@ -14,8 +14,36 @@ import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
 import MusicContainer from './containers/MusicContainer';
 import {BrowserRouter, Route, Router} from 'react-router-dom';
+import axios from 'axios';
+import moment from 'moment';
+import BigCalendar from 'react-big-calendar';
 
 export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      events: [],
+      podcastData : {},
+    }
+  }
+
+  componentDidMount() {
+    var user_id = sessionStorage.user_id;
+    // debugger
+    axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
+    .then( cal => {
+      // this.setState({events: cal.data});
+      let events = cal.data.map(e => {
+        return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
+      });
+
+      console.log(events)
+      this.setState({events})
+    })
+    .catch(err => {
+    });
+  }
+
   render() {
   if(sessionStorage.length === 0){
     return (
@@ -28,7 +56,6 @@ export default class App extends Component {
       </BrowserRouter>
       );
     }
-
     else {
       return(
         <BrowserRouter>
@@ -38,8 +65,8 @@ export default class App extends Component {
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
-          <div id="CalendarContainer" className="page">
-            <CalendarContainer/>
+          <div id="Calendar" className="page">
+            <Calendar events={this.state.events}/>
           </div>
           <div className="appbody">
             <div id="PodcastsContainer">

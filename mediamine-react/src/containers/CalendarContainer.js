@@ -3,9 +3,12 @@ import Calendar from './CalendarComponents/Calendar';
 
 export default class CalendarContainer extends Component {
   render() {
+    let {
+      events
+    } = this.props
     return (
       <div>
-        <Calendar />
+        <Calendar events={events}/>
       </div>
     );
   }
