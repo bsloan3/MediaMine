@@ -45,7 +45,11 @@ export default class CountDown extends Component {
     let new_dat = new Date(this.props.movie_date).getTime();
     this.setState({target_date: new_dat});
 
-    setInterval(this.getCountdown.bind(this), 1000);
+    this._shit = setInterval(this.getCountdown.bind(this), 1000);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this._shit)
   }
 
   render() {

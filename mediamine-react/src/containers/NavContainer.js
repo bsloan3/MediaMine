@@ -67,6 +67,7 @@ export default class NavContainer extends Component {
           Games
         </div>
       </a>
+<<<<<<< HEAD
 
       <a id="music-item" className="nav-item" href="#MusicContainer">
         <div className="stuff">
@@ -111,6 +112,22 @@ export default class NavContainer extends Component {
           </li>
         </ul>
       </li>
+=======
+
+      <a className="nav-item" onClick="/user-form">
+        <Link activeClassName='active' to='/user-form'>
+          Settings
+        </Link>
+      </a>
+
+      <a className="nav-item" onClick={this.logOut}>
+        <Link activeClassName='active' to='/logout'>
+          <div className="stuff">
+            Log Out
+          </div>
+        </Link>
+      </a>
+>>>>>>> 7df2982e37b7cf44c9eeeff4e9cb39c7eb5dcb45
     </Navbar>
   </Scrollspy>
 
