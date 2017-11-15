@@ -14,6 +14,7 @@ export default class MusicContainer extends Component {
     console.log(display_class)
     this.setState({display_class})
   }
+  
   render() {
     return (
       <div className="page_container">

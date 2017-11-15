@@ -696,3 +696,17 @@ tr th{
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
+
+
+.popup-podcast {
+  font-size: 20px;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 25%;
+  width: 30%;
+  top: 10%;
+  height: 100%;
+  background-color: #0000;
+}

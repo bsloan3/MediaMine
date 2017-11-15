@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import PodcastDisplay from './SignUpForms/PodcastDisplay'
-import {Button, Modal} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
+
 export default class PodcastContainer extends Component {
   constructor(props) {
     super(props);
@@ -38,11 +39,9 @@ export default class PodcastContainer extends Component {
     }
     render() {
       return(
-
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div id="search">
+        <div className="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="modal-body">
                 <form onSubmit={this.handleSubmit.bind(this)}>
                   <input onChange={this.handleChange} value={this.state.value} type="search" placeholder="Search Podcasts" name="value" />
                   <button type="submit" class="btn btn-primary">Search</button>
@@ -50,9 +49,12 @@ export default class PodcastContainer extends Component {
                 <i className="fa fa-search"></i>
                 {this.state.result.map( (p,i) => <PodcastDisplay key={i} podcast={p} />)}
               </div>
-            </div>
-          </div>
-        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+              </div>
+      </div>
+    </div>
 
     );
   }
