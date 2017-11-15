@@ -38,21 +38,14 @@ export default class PodcastContainer extends Component {
     }
     render() {
       return(
-
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div id="search">
+        <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
                 <form onSubmit={this.handleSubmit.bind(this)}>
                   <input onChange={this.handleChange} value={this.state.value} type="search" placeholder="Search Podcasts" name="value" />
                   <button type="submit" class="btn btn-primary">Search</button>
                 </form>
                 <i className="fa fa-search"></i>
                 {this.state.result.map( (p,i) => <PodcastDisplay key={i} podcast={p} />)}
-              </div>
-            </div>
           </div>
-        </div>
 
     );
   }
