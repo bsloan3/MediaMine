@@ -89,7 +89,12 @@ export default class NewsDisplay extends Component {
 
     render() {
       return(
-        <div>
+        // <div className="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        //   <div className="modal-dialog modal-lg" role="document">
+    <div>
+      <div className="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div className="modal-dialog modal-lg" role="document">
+          <div className="modal-body">
           <h1> Choose your favorite news sources! </h1>
           {this.state.sources.map(function (source, i) {
             return (
@@ -101,7 +106,15 @@ export default class NewsDisplay extends Component {
             )
           }.bind(this))
         }
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
         </div>
+    </div>
+  </div>
+</div>
+</div>
+
     )
   }
 }
