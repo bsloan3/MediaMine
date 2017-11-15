@@ -67,7 +67,6 @@ export default class NavContainer extends Component {
           Games
         </div>
       </a>
-<<<<<<< HEAD
 
       <a id="music-item" className="nav-item" href="#MusicContainer">
         <div className="stuff">
@@ -76,58 +75,30 @@ export default class NavContainer extends Component {
       </a>
 
 
-
-
-      <li className="dropdown">
         <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Settings <span className="caret"></span></a>
         <ul className="dropdown-menu">
           <li>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-              Launch demo modal
-            </button>
-
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                  </div>
-                  <div class="modal-body">
-                    hellohellohellohellohellohellohellohello
-                  </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <Link activeClassName='active' to="/podcasts">Podcasts</Link>
           </li>
           <li>
-            <Link onClick={this.toggleModal} activeClassName='active' to="/news">News</Link>
+            <Link activeClassName='active' to="/news">News</Link>
           </li>
           <li>
-            <Link onClick={this.toggleModal} activeClassName='active' to="/sports">Sports</Link>
+            <Link activeClassName='active' to="/sports">Sports</Link>
           </li>
-        </ul>
+          <li>
+          <a className="nav-item" onClick={this.logOut}>
+            <Link activeClassName='active' to='/logout'>
+            <div className="stuff">
+              Log Out
+            </div>
+          </Link>
+        </a>
       </li>
-=======
+        </ul>
 
-      <a className="nav-item" onClick="/user-form">
-        <Link activeClassName='active' to='/user-form'>
-          Settings
-        </Link>
-      </a>
 
-      <a className="nav-item" onClick={this.logOut}>
-        <Link activeClassName='active' to='/logout'>
-          <div className="stuff">
-            Log Out
-          </div>
-        </Link>
-      </a>
->>>>>>> 7df2982e37b7cf44c9eeeff4e9cb39c7eb5dcb45
+
     </Navbar>
   </Scrollspy>
 
