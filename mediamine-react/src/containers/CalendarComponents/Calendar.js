@@ -35,7 +35,7 @@ export default class Calendar extends Component {
       <div style={{paddingTop: '5%', textAlign: 'center'}}>
         <BigCalendar
           events={events}
-          defaultDate={new Date(2017, 11, 1)}
+          defaultDate={new Date()}
         />
       </div>
     );

@@ -65,6 +65,7 @@ a:hover {
 
 .nav-item {
   display: inline-block;
+  width:11%;
 }
 
 .stuff {
@@ -104,6 +105,7 @@ a:hover {
 h1 {
   margin: 0;
   padding: 0;
+  font-size: 30px;
 }
 html, body, .app {
   margin: 0;
@@ -111,9 +113,13 @@ html, body, .app {
   position: relative;
   width: 100%;
   height: 100vh;
+  font-family: 'Passion One', 'cursive';
+  font-size: 20px;
+  font-stretch: expanded;
 }
 
 .popup {
+  font-size: 15px;
   position: absolute;
   margin-left: 80%;
   width: 20%;
@@ -663,4 +669,3 @@ tr th{
   min-width: 200px;
   display: inline-block;
 }
-

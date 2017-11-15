@@ -13,8 +13,10 @@ import GamesContainer from './containers/GamesContainer';
 import PodcastsContainer from './containers/PodcastsContainer';
 import HomepageContainer from './containers/HomepageContainer';
 import MusicContainer from './containers/MusicContainer';
+import PodcastContainer from './containers/SignUpComponents/PodcastContainer'
+import NewsFormContainer from './containers/SignUpComponents/NewsFormContainer'
 import {BrowserRouter, Route, Router} from 'react-router-dom';
-
+// import UpcomingMovies from './containers/SignUpComponents/UpcomingMovies'
 export default class App extends Component {
   render() {
   if(sessionStorage.length === 0){
@@ -34,14 +36,16 @@ export default class App extends Component {
         <BrowserRouter>
         <div className="App">
           <div className="Nav">
-            <Route path='/user-form' component={UserFormContainer} />
+            <Route path='/settings' component={UserFormContainer} />
+            <Route path='/podcasts' component={PodcastContainer} />
+            <Route path='/news' component={NewsFormContainer} />
             <Route path='/logout' component={NavContainer} />
             <NavContainer/>
           </div>
+          <div className="appbody">
           <div id="CalendarContainer" className="page">
             <CalendarContainer/>
           </div>
-          <div className="appbody">
             <div id="PodcastsContainer">
               <PodcastsContainer/>
             </div>
@@ -50,9 +54,9 @@ export default class App extends Component {
               <SportsContainer/>
             </div>
 
-            {/* <div id="NewsContainer" className="page">
+            <div id="NewsContainer" className="page">
               <NewsContainer/>
-            </div> */}
+            </div>
 
             <div id="MoviesContainer" className="page">
               <MoviesContainer/>

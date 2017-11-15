@@ -4,8 +4,11 @@ import {Route, Link, NavLink} from 'react-router-dom';
 import PodcastContainer from './PodcastContainer';
 import PodcastDisplay from './SignUpForms/PodcastDisplay';
 import NewsFormContainer from './NewsFormContainer';
-import NewsDisplay from './NewsDisplay'
-import SportsSignUp from './SportsSignUp'
+import NewsDisplay from './NewsDisplay';
+import SportsSignUp from './SportsSignUp';
+import DropdownMenu from 'react-bootstrap-dropdown-menu';
+
+
 class UserFormContainer extends Component {
   constructor(props){
     super(props);
@@ -17,16 +20,12 @@ class UserFormContainer extends Component {
   }
     render () {
       return (
-      <div className="user-form">
-        <div id="PodcastsContainer">
-          {/* <PodcastContainer onUpdate={this.updateResult} />
-          <PodcastDisplay onUpdate={this.updateResult} /> */}
-          <NewsDisplay  />
-          <SportsSignUp />
-        </div>
-{/*
-          <MovieSignUp />
-          <PodcastsContainer />  */}
+        <div>
+
+             <MenuItem text='Home' location='#PodcastContainer' />
+             <MenuItem text='Edit Profile' location='#NewsDisplay' />
+             <MenuItem text='Logout' location='#SportsSignUp' />
+
         </div>
         );
       }
