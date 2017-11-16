@@ -34,14 +34,19 @@ class SportsSignUp extends Component {
 
   render(){
     return(
-      <div>
-
-        <Button onClick={this.addSport.bind(this, this.state.hockey)}> NHL </Button>
-        <Button onClick={this.addSport.bind(this, this.state.baseball)}> MLB </Button>
-        <Button onClick={this.addSport.bind(this, this.state.football)}> NFL </Button>
-        <Button onClick={this.addSport.bind(this, this.state.basketball)}> NBA </Button>
-
-       </div>
+    <div className="modal fade bs-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div className="modal-dialog modal-lg" role="document">
+        <div className="modal-body">
+          <Button onClick={this.addSport.bind(this, this.state.hockey)}> NHL </Button>
+          <Button onClick={this.addSport.bind(this, this.state.baseball)}> MLB </Button>
+          <Button onClick={this.addSport.bind(this, this.state.football)}> NFL </Button>
+          <Button onClick={this.addSport.bind(this, this.state.basketball)}> NBA </Button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     )
   }
 }

@@ -25,7 +25,6 @@ addNews(source){
       }
     }
   axios.post(my_url, data).then(res => {
-    window.location.reload()
     });
   }
 
@@ -33,9 +32,9 @@ addNews(source){
     let {source} = this.props
     return(
       <div>
-        
-          <Button onClick={this.addNews.bind(null, source)}>
-            <h4>Add Source</h4>
+
+          <Button className="btn btn-info btn-xsm add-news-button" onClick={this.addNews.bind(null, source)}>
+            <h4>Add</h4>
           </Button>
       </div>
 

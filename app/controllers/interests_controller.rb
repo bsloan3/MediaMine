@@ -1,6 +1,7 @@
 class InterestsController < ApplicationController
 
   def addpodcast
+
     @podcast = Podcast.find_by(podcast_name: params[:podcast][:podcast_name])
     @new_podcast = Interest.new(user_id: params[:user_id].to_i, interestable: @podcast)
     if @new_podcast.save

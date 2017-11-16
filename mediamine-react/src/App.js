@@ -48,8 +48,8 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
+        <Route path='/register' component={SignupContainer} />
         <HomepageContainer />
-        <Route path='/signup' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
       </div>
       </BrowserRouter>
@@ -60,7 +60,6 @@ export default class App extends Component {
         <BrowserRouter>
         <div className="App">
           <div className="Nav">
-            {/* <Route path='/settings' component={UserFormContainer} /> */}
             <Route path='/podcasts' component={PodcastContainer} />
             <Route path='/news' component={NewsDisplay} />
             <Route path='/logout' component={NavContainer} />

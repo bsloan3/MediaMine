@@ -33,7 +33,7 @@ export default class PodcastDisplay extends Component {
           <div>
           <center>
           <h2>{this.props.podcast.podcast_name}</h2>
-          <Button onClick={this.addPodcast.bind(null, this.props.podcast)}>
+          <Button className="btn btn-info" onClick={this.addPodcast.bind(null, this.props.podcast)}>
            Add
          </Button>
        </center>

@@ -7,7 +7,7 @@ import {DropdownMenu} from 'react-bootstrap-dropdown-menu';
 import UserFormContainer from './SignUpComponents/UserFormContainer';
 import PodcastContainer from './SignUpComponents/PodcastContainer';
 import NewsDisplay from './SignUpComponents/NewsDisplay'
-
+import SportsSignUp from './SignUpComponents/SportsSignUp'
 
 export default class NavContainer extends Component {
   constructor(props) {
@@ -79,7 +79,7 @@ export default class NavContainer extends Component {
             <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2">News</a>
           </li>
           <li>
-            <a activeClassName='active' to="/sports">Sports</a>
+            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg3">Sports</a>
           </li>
           <li>
           <a className="nav-item" onClick={this.logOut}>
@@ -97,6 +97,7 @@ export default class NavContainer extends Component {
     </Navbar>
   <PodcastContainer/>
   <NewsDisplay/>
+  <SportsSignUp />
   </Scrollspy>
 
   </div>
