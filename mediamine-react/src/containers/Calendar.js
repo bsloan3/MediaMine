@@ -58,7 +58,7 @@ export default class Calendar extends Component {
           defaultDate={new Date()}
         />
 
-        <form onSubmit={this.addEvent} />
+        {/* <form onSubmit={this.addEvent} />
         <div className="form-group">
           <label className="cols-sm-2 control-label">Title </label>
           <FormControl
@@ -84,7 +84,7 @@ export default class Calendar extends Component {
             <Button className="btn btn-danger btn-block" type="submit">
               Register
             </Button>
-          </div>
+          </div> */}
       </div>
   )
   }
