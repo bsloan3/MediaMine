@@ -291,7 +291,7 @@ html, body, .app {
 
 /*sports*/
 .standings{
-  color: black;
+  color: white;
 }
 
 .video-background {
@@ -589,7 +589,7 @@ span.input-group-addon i {
 .entire-scoreboard {
   text-align: center;
   background-color: SaddleBrown;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
