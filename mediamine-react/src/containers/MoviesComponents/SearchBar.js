@@ -31,7 +31,7 @@ export default class SearchBar extends Component {
     return(
       <div>
         <form className="custom-search-input" onSubmit={this.handleSubmit.bind(this)}>
-            <input onChange={this.handleChange} value={this.state.value} className="search-query" id="search" type="text" placeholder="Search Movies" name="value" />
+            <input onChange={this.handleChange} value={this.state.value} className="search-query" id="search" type="search" placeholder="Search Movies" name="value" />
         </form>
         <i className="fa fa-search"></i>
       </div>
