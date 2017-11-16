@@ -32,7 +32,7 @@ export default class MoviesContainer extends Component {
         <SearchBar onUpdate={this.updateResult} />
         <div style={{width: '40%', height: '70VH', float:'right', paddingRight:'3%', overflowY: 'scroll'}}>
           <div className="movie-result">
-            <MovieResult newMovie={this.state.results || []}/>
+            <MovieResult newMovie={this.state.results} update={this.props.updateResult}/>
           </div>
         </div>
         <MovieCountdowns />

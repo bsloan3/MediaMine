@@ -10,10 +10,13 @@ export default class NewsFormContainer extends Component {
     this.state = {
       sources: [],
       news: {
-      outlet_name: ''
+      outlet_name: '',
+      showMe: false
     }
   }
   this.addNews = this.addNews.bind(this)
+
+
 }
 
 addNews(source){
@@ -28,14 +31,17 @@ addNews(source){
     });
   }
 
+
+
   render() {
     let {source} = this.props
     return(
       <div>
 
-          <Button className="btn btn-info btn-xsm add-news-button" onClick={this.addNews.bind(null, source)}>
+          <Button className="btn btn-info btn-xsm add-news-button" onClick={this.addNews.bind(this)}>
             <h4>Add</h4>
           </Button>
+    g
       </div>
 
     );
