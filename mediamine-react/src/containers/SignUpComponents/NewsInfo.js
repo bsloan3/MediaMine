@@ -80,7 +80,7 @@ export default class NewsDisplay extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({sources: responseJson.sources});
-        console.log(this.state.sources)
+        // console.log(this.state.sources)
       })
       .catch((error) => {
         console.error(error);
