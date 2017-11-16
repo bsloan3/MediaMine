@@ -24,8 +24,6 @@ export default class LoginContainer extends Component {
     if (res.status === 200) {
       this.setState({email: res.email})
       sessionStorage.setItem("user_id", res.data.id);
-      console.log(this.props)
-      this.props.history.push('/')
       window.location.reload()
     }
     }).catch(error => {
@@ -55,6 +53,7 @@ export default class LoginContainer extends Component {
       <div className='popup'>
        <div className='popup_inner'>
          <div className="logincontainer">
+           <h1>Login</h1>
         <form onSubmit={this.submitLogIn}>
           <FormGroup controlId="formHorizontalEmail"
             validationState={this.getValidationState(this)}
