@@ -27,7 +27,7 @@ export default class MovieResult extends Component {
     }
 
     axios.post(my_url, data).then(res => {
-      window.location.reload()
+      // window.location.reload()
     })
   }
   render() {

@@ -28,8 +28,8 @@ export default class SignupContainer extends Component {
             <Register/>
         </div>
 
-        
         <div id="PodcastSearch" className="podcast-signup">
+          <h1>Add Your Favorite Podcasts</h1>
           <PodcastSearch />
         </div>
 
@@ -38,7 +38,7 @@ export default class SignupContainer extends Component {
           <NewsInfo />
         </div>
 
-        <Button type="button" onClick={this.refresh}> All Done!</Button>
+        <Button className="submitnewuser" type="button" onClick={this.refresh}> All Done!</Button>
       </Scrollspy>
       </div>
 
