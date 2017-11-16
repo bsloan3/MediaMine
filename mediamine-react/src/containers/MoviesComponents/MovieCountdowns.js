@@ -39,7 +39,6 @@ export default class MovieCountdowns extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({movies: responseJson});
-        debugger
       })
       .catch((error) => {
         console.error(error);
