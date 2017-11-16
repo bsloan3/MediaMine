@@ -9,7 +9,7 @@ import Scrollspy from 'react-scrollspy';
 
 export default class SignupContainer extends Component {
   constructor(props){
-    super(props);
+    super(props)
   }
 
   refresh(){

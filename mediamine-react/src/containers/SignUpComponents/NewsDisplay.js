@@ -6,6 +6,13 @@ import NewsFormContainer from './NewsFormContainer'
 import NewsInfo from './NewsInfo'
 
 export default class NewsDisplay extends Component {
+  constructor(props){
+    super(props)
+
+  }
+  refresh(){
+    window.location.assign('/#NewsContainer');
+  }
     render() {
       return(
 
@@ -15,7 +22,7 @@ export default class NewsDisplay extends Component {
           <div className="modal-body">
             <NewsInfo />
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onClick={this.refresh}>Close</button>
         </div>
     </div>
   </div>

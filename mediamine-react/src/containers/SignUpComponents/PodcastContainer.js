@@ -5,6 +5,12 @@ import {Button} from 'react-bootstrap'
 import PodcastSearch from './PodcastSearch'
 
 export default class PodcastContainer extends Component {
+  constructor(props){
+    super(props)
+  }
+  refresh(){
+    window.location.assign('/#PodcastContainer');
+  }
     render() {
       return(
         <div className="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -13,7 +19,7 @@ export default class PodcastContainer extends Component {
               <PodcastSearch />
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onClick={this.refresh}>Close</button>
               </div>
       </div>
     </div>
