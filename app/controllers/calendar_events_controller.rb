@@ -10,7 +10,7 @@ class CalendarEventsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:user][:email])
+    @user = User.find_by(id: params[:id)
     @new_event = CalEvent.new(user: @user, title: params[:title], description: params[:description], start: params[:start], end: parmams[:end])
     if @new_event.save
       render json: @new_event
