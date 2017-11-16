@@ -65,7 +65,7 @@ export default class MovieCountdowns extends Component {
           {this.state.movies.map(function (movie, i) {
             if(moment().isSameOrBefore(movie.movie_date)) {
             return (
-              <div key={i} className="movie">
+              <div key={i} className="movie"  style={{color: 'white'}}>
                 <CountDown movie_date={movie.movie_date}/>
                 <img className="photoimg" src= {'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + (movie.movie_image)} />
                 <h2>{movie.movie_name}</h2>
