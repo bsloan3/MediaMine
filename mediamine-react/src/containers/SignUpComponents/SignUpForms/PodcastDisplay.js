@@ -23,6 +23,7 @@ export default class PodcastDisplay extends Component {
     }
 
     axios.post(my_url, data).then(res => {
+      window.location.reload()
       // debugger
     })
   }

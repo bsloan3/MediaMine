@@ -28,6 +28,8 @@ addNews(source){
       }
     }
   axios.post(my_url, data).then(res => {
+
+    window.location.reload();
     });
   }
 
@@ -35,13 +37,13 @@ addNews(source){
 
   render() {
     let {source} = this.props
+    // debugger
     return(
       <div>
 
-          <Button className="btn btn-info btn-xsm add-news-button" onClick={this.addNews.bind(this)}>
+          <Button className="btn btn-info btn-xsm add-news-button" onClick={this.addNews.bind(null, source)}>
             <h4>Add</h4>
           </Button>
-    g
       </div>
 
     );

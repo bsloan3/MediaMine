@@ -6,7 +6,6 @@ import Scrollspy from 'react-scrollspy';
 import {DropdownMenu} from 'react-bootstrap-dropdown-menu';
 import PodcastContainer from './SignUpComponents/PodcastContainer';
 import NewsDisplay from './SignUpComponents/NewsDisplay'
-import SportsSignUp from './SignUpComponents/SportsSignUp'
 
 export default class NavContainer extends Component {
   constructor(props) {
