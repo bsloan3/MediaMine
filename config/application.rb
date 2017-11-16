@@ -18,7 +18,7 @@ Bundler.require(*Rails.groups)
 
 module MediaMine
   class Application < Rails::Application
-
+    config.load_defaults 5.1
     # ...
 
     # Rails 5
@@ -29,6 +29,20 @@ module MediaMine
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+    # Initialize configuration defaults for originally generated Rails version.
+
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+
+    # config.action_dispatch.default_headers = {
+    #   'Access-Control-Allow-Origin' => '*',
+    #   'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+    # }
+
+   # Don't generate system test files.
+   config.generators.system_tests = nil
 
   end
 
