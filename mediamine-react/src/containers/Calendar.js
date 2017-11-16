@@ -13,7 +13,7 @@ export default class Calendar extends Component {
       <div className="calendar_container calendar-page-container" style={{paddingTop: '5%', textAlign: 'center'}}>
         <BigCalendar
           events={this.props.events}
-          defaultDate={new Date(2017, 11, 1)}
+          defaultDate={new Date(2017, 10, 1)}
         />
       </div>
   )

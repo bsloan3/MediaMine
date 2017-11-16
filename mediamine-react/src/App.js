@@ -31,42 +31,29 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-
-  var user_id = sessionStorage.user_id;
-  axios.get('http://localhost:5000/users/' + user_id + '/movies/')
-  .then( cal => {
-    let events = cal.data.map(e => {
-      return {title: e.movie_name, start: new Date(e.movie_date), end: new Date(e.movie_date)}
+    var movie_events = [];
+    var calendar_events = [];
+    var user_id = sessionStorage.user_id;
+    axios.get('http://localhost:5000/users/' + user_id + '/movies/')
+    .then( cal_movie => {
+      movie_events = cal_movie.data.map(e => {
+        return {title: e.movie_name, start: new Date(e.movie_date), end: new Date(e.movie_date)}
+      })
+      this.setState({ events: movie_events})
     });
-    this.setState({events})
-  })
-  .catch(err => {
-  });
-}
-  // componentDidMount() {
-  //   let calendarevents = [];
-  //   let cal_2_evenets = [];
-  //   var user_id = sessionStorage.user_id;
-  //   axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
-  //   .then( cal => {
-  //     let calendarevents = cal.data.map(e => {
-  //       return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
-  //     });
-  //   this.setState({events: calendarevents}
-  //   })
 
-// axios.get('http://localhost:5000/users/'+user_id+'/movies/')
-//   .then((responseJson) => {
-//     let cal_2_evenets = responseJson.map(e => {
-//       return {title: e.title, start: new Date(e.start), end: new Date(e.end)};
-//     })
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
-// debugger
-// this.setState({events: calendarevents});
-// }
+      // axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
+      // .then( cal_events => {
+      //   let calendar_events = cal_events.data.map(e => {
+      //     return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
+      //   });
+        // console.log(this.state)
+        // .catch((error) => {
+        //   console.error(error);
+      // }
+    // })
+    // console.log(movie_events)
+  }
 
   render() {
   if(sessionStorage.length === 0){
