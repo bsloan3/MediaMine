@@ -15,6 +15,7 @@ export default class NavContainer extends Component {
     this.logOut = this.logOut.bind(this);
   }
 
+
   logOut(){
     sessionStorage.clear()
     axios.post('http://localhost:5000/logout')
@@ -71,15 +72,12 @@ export default class NavContainer extends Component {
       </a>
 
         <a className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Settings <span className="caret"></span></a>
-        <ul className="dropdown-menu">
+        <ul style={{color: 'black'}} className="dropdown-menu">
           <li>
-            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Podcasts</a>
+            <a className="btn " data-toggle="modal" data-target=".bs-example-modal-lg1">Podcasts</a>
           </li>
           <li>
-            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2">News</a>
-          </li>
-          <li>
-            <a className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg3">Sports</a>
+            <a className="btn" data-toggle="modal" data-target=".bs-example-modal-lg2">News</a>
           </li>
           <li>
           <a className="nav-item" onClick={this.logOut}>
@@ -97,7 +95,7 @@ export default class NavContainer extends Component {
     </Navbar>
   <PodcastContainer/>
   <NewsDisplay/>
-  <SportsSignUp />
+
   </Scrollspy>
 
   </div>
