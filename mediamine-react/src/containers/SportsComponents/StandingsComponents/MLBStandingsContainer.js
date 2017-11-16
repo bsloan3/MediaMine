@@ -33,7 +33,7 @@ export default class MLBStandingsContainer extends Component {
                 {conf.teamentry.map(function (team, i) {
                   return (
                     <div key={i}>
-                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]} | R {team.stats.RunsFor["#text"]} | RA {team.stats.RunsAgainst["#text"]}</p>
+                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]} | RF {team.stats.RunsFor["#text"]} | RA {team.stats.RunsAgainst["#text"]}</p>
                     </div>
                   )
                 })}

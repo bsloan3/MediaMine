@@ -33,7 +33,7 @@ export default class NBAStandingsContainer extends Component {
                 {conf.teamentry.map(function (team, i) {
                   return (
                     <div key={i}>
-                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]}</p>
+                      <p>{team.rank} | {team.team.City} {team.team.Name} | W {team.stats.Wins["#text"]} | L {team.stats.Losses["#text"]} | GP {team.stats.GamesPlayed["#text"]} | PF {team.stats.Pts["#text"]} | PA {team.stats.PtsAgainst["#text"]}</p>
                     </div>
                   )
                 })}
