@@ -69,7 +69,7 @@ export default class MovieCountdowns extends Component {
                 <CountDown movie_date={movie.movie_date}/>
                 <img className="photoimg" src= {'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + (movie.movie_image)} />
                 <h2>{movie.movie_name}</h2>
-                <h4>{(new Date(movie.movie_date)).toString()}</h4>
+                <h4><center>{moment(movie.movie_date).format('MM/DD/YYYY')}</center></h4>
               </div>
             )}
           })}
