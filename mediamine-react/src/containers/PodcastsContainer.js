@@ -3,12 +3,14 @@ import Slider from 'react-slick';
 import axios from 'axios';
 
 function SampleNextArrow(props) {
-const {className, style, handleSubmit} = props
+  // console.log(props)
+const {className, style, onClick} = props
+  console.log(onClick)
 return (
   <div
     className={className}
     style={{...style, display: 'block'}}
-    onClick={handleSubmit()}
+    onClick={onClick}
   ></div>
 );
 }
@@ -44,6 +46,7 @@ export default class PodcastContainer extends Component {
       });
   }
   handleSubmit() {
+    console.log("Got into podcast handleSubmit")
     let {embed_links, podcast_call_index} = this.state;
     axios.get('http://localhost:5000/users/' + sessionStorage.user_id + '/podcasts/' + podcast_call_index)
       .then( update_podcasts => {
@@ -60,7 +63,7 @@ export default class PodcastContainer extends Component {
           speed: 500,
           slidesToShow: 3,
           slidesToScroll: 1,
-          nextArrow: <SampleNextArrow handleSubmit={this.handleSubmit}/>,
+          nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />,
           style: {
             width: "90%"
