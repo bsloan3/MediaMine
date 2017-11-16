@@ -20,6 +20,7 @@ export default class NewsFormContainer extends Component {
 }
 
 addNews(source){
+  debugger
   let my_url = 'http://localhost:5000/users/'+sessionStorage.user_id+'/news';
   let data = {
     user_id: sessionStorage.user_id,
@@ -28,8 +29,6 @@ addNews(source){
       }
     }
   axios.post(my_url, data).then(res => {
-
-    window.location.reload();
     });
   }
 
