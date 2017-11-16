@@ -133,10 +133,10 @@ html, body, .app {
 .popup {
   font-size: 15px;
   position: absolute;
-  margin-left: 80%;
+  margin-left: 65%;
+  margin-right: 5%;
   width: 20%;
   top: 5%;
-  height: 50%;
   background-color: #000;
 }
 
@@ -926,20 +926,29 @@ body {
   text-align: center;
 }
 
-.register {
-  padding-right: 10%;
-  padding-left: 10%;
-  align: center;
+.sign-up-page .register {
   padding-top: 5%;
-  height: 100VH;
+  padding-left: 5%;
+  padding-right: 5%;
+  align: center;
 }
 
-.podcast-signup {
-  height: 100VH;
+.sign-up-page .podcast-signup {
+  padding: 0px;
+  margin: 5%;
 }
 
+.submitnewuser {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  color: white;
+  width: 20%;
+  background-color: green;
+}
 
-.add-news-button {
+.sign-up-page .add-news-button {
+  margin: 5%;
 }
 
 input::first-letter{
@@ -957,18 +966,14 @@ input[type=text] {
 }
 
 
-#vidtop-content {
-	top: 0;
-	color: #fff;
-}
-
 .vid-info {
   align: center;
+  color: white;
   display: inline-block;
   text-align: center;
-  margin-right: 50%;
+  margin-right: 40%;
   margin-left: 5%;
-  margin-top: 20%;
+  margin-top: 5%;
   margin-bottom: 5%;
   padding: 3%;
   background-color:black;
@@ -976,5 +981,5 @@ input[type=text] {
 
 .homepage-containers {
   background-color: lightblue;
-  height: 100VH;
+  height: 70VH;
 }

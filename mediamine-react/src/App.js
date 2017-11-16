@@ -4,7 +4,6 @@ import './App.css';
 import NavContainer from './containers/NavContainer';
 import Calendar from './containers/Calendar';
 import SignupContainer from './containers/SignUpComponents/SignupContainer';
-import UserFormContainer from './containers/SignUpComponents/UserFormContainer';
 import LoginContainer from './containers/LoginContainer';
 import SportsContainer from './containers/SportsContainer';
 import MoviesContainer from './containers/MoviesContainer';
@@ -39,7 +38,7 @@ export default class App extends Component {
       movie_events = cal_movie.data.map(e => {
         return {title: e.movie_name, start: new Date(e.movie_date), end: new Date(e.movie_date)}
       })
-      // this.setState({ events: movie_events})
+      this.setState({ events: movie_events})
     });
 
       axios.get('http://localhost:5000/users/' + user_id + '/calendarevents/')
@@ -48,10 +47,10 @@ export default class App extends Component {
           return {title: e.title, start: new Date(e.start), end: new Date(e.end)}
         })
 
-        console.log(calendar_events)
-
-        let cats = this.state.events
-      this.setState({ events: cats.concat(calendar_events)})
+      //   console.log(calendar_events)
+      //
+      //   let cats = this.state.events
+      // this.setState({ events: cats.concat(calendar_events)})
         // .catch((error) => {
         //   console.error(error);
     //   }
@@ -65,8 +64,8 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
-        <Route path='/register' component={SignupContainer} />
         <HomepageContainer />
+        <Route path='/register' component={SignupContainer} />
         <Route path='/login' component={LoginContainer} />
       </div>
       </BrowserRouter>
