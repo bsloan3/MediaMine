@@ -145,7 +145,7 @@ Interest.create(user: brad, interestable: pod4)
 Interest.create(user: brad, interestable: pod5)
 Interest.create(user: brad, interestable: pod6)
 
-CalendarEvent.create(user:brad, title: "Supergirl", start: "2017-11-20 09:00:00", end: "2017-11-20 10:00:00")
+CalendarEvent.create(user:brad, title: "Supergirl", start: "2017-11-20 21:00:00", end: "2017-11-20 22:00:00")
 CalendarEvent.create(user:brad, title: "Supergirl", start: "2017-11-27 09:00:00", end: "2017-11-27 10:00:00")
 CalendarEvent.create(user:brad, title: "Supergirl", start: "2017-12-04 09:00:00", end: "2017-12-04 10:00:00")
 CalendarEvent.create(user:brad, title: "Supergirl", start: "2017-12-11 09:00:00", end: "2017-12-11 10:00:00")
