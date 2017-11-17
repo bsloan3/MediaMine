@@ -34,6 +34,18 @@ export default class MovieCountdowns extends Component {
       movies:[]
     };
   }
+
+  componentWillReceiveProps(nextProps) {
+  fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      this.setState({movies: responseJson});
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
   componentDidMount(){
     fetch('http://localhost:5000/users/'+sessionStorage.user_id+'/movies/')
       .then((response) => response.json())

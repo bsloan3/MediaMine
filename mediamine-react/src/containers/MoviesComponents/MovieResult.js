@@ -27,7 +27,7 @@ export default class MovieResult extends Component {
     }
 
     axios.post(my_url, data).then(res => {
-      window.location.reload()
+      this.props.update()
     })
   }
   render() {
@@ -38,7 +38,7 @@ export default class MovieResult extends Component {
           // console.log(movie)
           if(moment().isSameOrBefore(movie.release_date || movie.first_air_date)) {
           return(
-           <MovieInformation key={i} addMovie={this.addMovie} movie={movie}/>
+           <MovieInformation key={i} update={this.props.update} addMovie={this.addMovie} movie={movie}/>
          )}
         })}
 

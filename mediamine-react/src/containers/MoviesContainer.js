@@ -6,9 +6,19 @@ import MovieCountdowns from './MoviesComponents/MovieCountdowns'
 export default class MoviesContainer extends Component {
     constructor(props) {
       super(props);
-      this.state = {results: []}
+      this.state = {
+        results: [],
+        movie: 1
+      }
       this.updateResult = this.updateResult.bind(this);
+      this.updateMovies = this.updateMovies.bind(this);
     }
+
+  updateMovies(){
+    this.setState({movie: this.state.movie + 1}, function () {
+    console.log(this.state.movie);
+    });
+  }
 
   updateResult(newResult) {
     this.setState({results: newResult})
@@ -32,10 +42,10 @@ export default class MoviesContainer extends Component {
         <SearchBar onUpdate={this.updateResult} />
         <div style={{width: '40%', height: '70VH', float:'right', paddingRight:'3%', overflowY: 'scroll'}}>
           <div className="movie-result">
-            <MovieResult newMovie={this.state.results} update={this.props.updateResult}/>
+            <MovieResult newMovie={this.state.results} update={this.updateMovies}/>
           </div>
         </div>
-        <MovieCountdowns />
+        <MovieCountdowns movie={this.state.movie} />
       </div>
     );
   }
